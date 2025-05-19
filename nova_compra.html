@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova Compra</title>
+    <link rel="stylesheet" href="CSS/nova_compra.css">
+</head>
+
+<body>
+    <div class="in_box">
+        <p class="title_box">Nova Compra</p>
+        <input type="date" class="data">
+    </div>
+
+    <div class="container">
+        <div class="input">
+            <input type="text" placeholder="Fornecedor">
+            <button class="input_button">
+                <img src="assets/thumbtack (1).svg">
+            </button>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="input">
+            <input type="text" placeholder="Produto">
+            <button class="input_button">
+                <img src="/assets/search.svg">
+            </button>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="input">
+            <input type="text" placeholder="Quantidade">
+            <button class="input_button">
+            </button>
+        </div>
+    </div>
+
+    <div class="botao">
+        <button class="bt">Adicionar</button>
+    </div>
+
+    <div class="ordenar">
+        <div class="categoria_suspenso">
+            <label for="categoria">Filtrar por: </label>
+            <select id="categoria" name="filtro">
+                <option selected></option>
+                <option value="az">Fornecedor</option>
+                <option value="za">Data</option>
+                <option value="maiorq">Maior quantidade</option>
+                <option value="menorq">Menor quantidade</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="tabela_nova_compra">
+        <table>
+            <tr class="header">
+                <th>Fornecedor</th>
+                <th>Produto</th>
+                <th>Quantidade</th>
+                <th>Ações</th>
+            </tr>
+            <tr>
+                <td>Fornecedor A</td>
+                <td>Produto A</td>
+                <td>30 caixas</td>
+                <td>
+                    <button class="btn-trash">
+                        <img src="assets/trash.svg" alt="Excluir">
+                    </button>
+                </td>
+            </tr>
+            <tr>
+                <td>Fornecedor A</td>
+                <td>Produto B</td>
+                <td>20 caixas</td>
+                <td>
+                    <button class="btn-trash">
+                        <img src="assets/trash.svg" alt="Excluir">
+                    </button>
+                </td>
+            </tr>
+            <tr>
+                <td>Fornecedor A</td>
+                <td>Produto C</td>
+                <td>100 caixas</td>
+                <td>
+                    <button class="btn-trash">
+                        <img src="assets/trash.svg" alt="Excluir">
+                    </button>
+                </td>
+            </tr>
+            <tr>
+                <td>Fornecedor A</td>
+                <td>Produto D</td>
+                <td>60 caixas</td>
+                <td>
+                    <button class="btn-trash">
+                        <img src="assets/trash.svg" alt="Excluir">
+                    </button>
+                </td>
+            </tr>
+            <tr>
+                <td>Fornecedor A</td>
+                <td>Produto E</td>
+                <td>90 caixas</td>
+                <td>
+                    <button class="btn-trash">
+                        <img src="assets/trash.svg" alt="Excluir">
+                    </button>
+                </td>
+            </tr>
+            <tr>
+                <td>Fornecedor A</td>
+                <td>Produto F</td>
+                <td>100 caixas</td>
+                <td>
+                    <button class="btn-trash">
+                        <img src="assets/trash.svg" alt="Excluir">
+                    </button>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="botao_confirma">
+        <button class="bt">Confirmar compra</button>
+    </div>
+</body>
+
+</html>
