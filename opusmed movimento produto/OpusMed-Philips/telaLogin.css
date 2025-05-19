@@ -1,0 +1,26 @@
+html {
+  background-image: url('opusmed.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  height: 100vh;
+}
+
+body {
+}
+
+.link-rodape {
+  position: fixed;
+  bottom: 40px;   /* distância da base da tela */
+  left: 50%;      /* centraliza horizontalmente */
+  transform: translateX(-50%);
+  background-color: #e417c9;
+  padding: 10px 15px;
+  border-radius: 8px;
+  color: rgb(237, 252, 31);
+  text-decoration: underline;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
