@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de compras</title>
+    <link rel="stylesheet" href="CSS/compras.css">
+    <link rel="stylesheet" href="CSS/lista_componente.css">
+    <link rel='stylesheet'
+        href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel='stylesheet'
+        href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-straight/css/uicons-regular-straight.css'>
+    <link rel='stylesheet'
+        href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+</head>
+
+<body>
+    <nav>
+        <div>
+            <i class="fi fi-rr-menu-burger"></i>
+        </div>
+        <div>
+            <ul>
+                <li>
+                    <i class="fi fi-rs-box-open-full"></i>
+                </li>
+                <li>
+                    <i class="fi fi-rs-box-open-full"></i>
+                </li>
+                <li>
+                    <i class="fi fi-rs-box-open-full"></i>
+                </li>
+                <li>
+                    <i class="fi fi-rs-box-open-full"></i>
+                </li>
+            </ul>
+        </div>
+        <div>
+
+        </div>
+    </nav>
+    <main>
+        <menu>
+            <span>Lista de compras</span>
+        </menu>
+
+        <div class="container">
+            <div class="input">
+                <input type="text" placeholder="Pesquisar"> 
+                <button class="input_button">
+                    <img src="assets/search.svg">
+                </button>
+            </div>
+            
+            <div class="categoria_suspenso">
+                <label for="categoria">Filtrar por: </label>
+                <select id="categoria" name="filtro">
+                    <option selected></option>
+                    <option value="az">Fornecedor</option>
+                    <option value="za">Data</option>
+                    <option value="maiorq">Maior valor</option>
+                    <option value="menorq">Menor valor</option>
+                </select>
+            </div>
+        </div>
+
+        <section class="list">
+            <header>
+                <div class="row">
+                    <span>Total</span>
+                    <span>Mês</span>
+                </div>
+            </header>
+            <ul class="accordation">
+                <li>
+                    <input type="radio" name="accordation" id="1" checked>
+                    <label for="1">
+                        <div class="row">
+                            <span> R$ 3000,00 </span>
+                            <span> Janeiro</span>
+                        </div>
+                    </label>
+                    <div class="content">
+                        <table>
+                            <tr>
+                                <td class="day">Dia</td>
+                                <td class="supplier">Fornecedor A</td>
+                                <td class="total">Total</td>
+                            </tr>
+                            <tr>
+                                <td class="day">10</td>
+                                <td class="supplier">Fornecedor A</td>
+                                <td class="total">2000,00</td>
+                            </tr>
+                            <tr>
+                                <td class="day">20</td>
+                                <td class="supplier">Fornecedor A</td>
+                                <td class="total">1000,00</td>
+                            </tr>
+                        </table>
+                    </div>
+                </li>
+                <li>
+                    <input type="radio" name="accordation" id="2">
+                    <label for="2">
+                        <div class="row">
+                            <span> R$ 3800,00 </span>
+                            <span> Fevereiro</span>
+                        </div>
+                    </label>
+                    <div class="content">
+                        <table>
+                            <tr>
+                                <td class="day">Dia</td>
+                                <td class="supplier">Fornecedor</td>
+                                <td class="total">Total</td>
+                            </tr>
+                            <tr>
+                                <td class="day">10</td>
+                                <td class="supplier">Fornecedor B</td>
+                                <td class="total">2000,00</td>
+                            </tr>
+                            <tr>
+                                <td class="day">20</td>
+                                <td class="supplier">Fornecedor B</td>
+                                <td class="total">1800,00</td>
+                            </tr>
+                        </table>
+                    </div>
+                </li>
+                <li>
+                    <input type="radio" name="accordation" id="3">
+                    <label for="3">
+                        <div class="row">
+                            <span> R$ 3000,00 </span>
+                            <span> Março</span>
+                        </div>
+                    </label>
+                    <div class="content">
+                        <table>
+                            <tr>
+                                <td class="day">Dia</td>
+                                <td class="supplier">Fornecedor</td>
+                                <td class="total">Total</td>
+                            </tr>
+                            <tr>
+                                <td class="day">10</td>
+                                <td class="supplier">Asdrubal</td>
+                                <td class="total">2000,00</td>
+                            </tr>
+                            <tr>
+                                <td class="day">11</td>
+                                <td class="supplier">Coorp</td>
+                                <td class="total">1000,00</td>
+                            </tr>
+                        </table>
+                    </div>
+                </li>
+                <li>
+                    <input type="radio" name="accordation" id="4">
+                    <label for="4">
+                        <div class="row">
+                            <span> R$ 3000,00 </span>
+                            <span> Abril</span>
+                        </div>
+                    </label>
+                    <div class="content">
+                        <table>
+                            <tr>
+                                <td class="day">Dia</td>
+                                <td class="supplier">Fornecedor</td>
+                                <td class="total">Total</td>
+                            </tr>
+                            <tr>
+                                <td class="day">10</td>
+                                <td class="supplier">Asdrubal</td>
+                                <td class="total">2000,00</td>
+                            </tr>
+                            <tr>
+                                <td class="day">11</td>
+                                <td class="supplier">Coorp</td>
+                                <td class="total">1000,00</td>
+                            </tr>
+                        </table>
+                    </div>
+                </li>
+                <li>
+                    <input type="radio" name="accordation" id="5">
+                    <label for="5">
+                        <div class="row">
+                            <span> R$ 3000,00 </span>
+                            <span> Maio</span>
+                        </div>
+                    </label>
+                    <div class="content">
+                        <table>
+                            <tr>
+                                <td class="day">Dia</td>
+                                <td class="supplier">Fornecedor</td>
+                                <td class="total">Total</td>
+                            </tr>
+                            <tr>
+                                <td class="day">10</td>
+                                <td class="supplier">Asdrubal</td>
+                                <td class="total">2000,00</td>
+                            </tr>
+                            <tr>
+                                <td class="day">11</td>
+                                <td class="supplier">Coorp</td>
+                                <td class="total">1000,00</td>
+                            </tr>
+                        </table>
+                    </div>
+                </li>
+                <li>
+                    <input type="radio" name="accordation" id="6">
+                    <label for="6">
+                        <div class="row">
+                            <span> R$ 3000,00 </span>
+                            <span> Junho</span>
+                        </div>
+                    </label>
+                    <div class="content">
+                        <table>
+                            <tr>
+                                <td class="day">Dia</td>
+                                <td class="supplier">Fornecedor</td>
+                                <td class="total">Total</td>
+                            </tr>
+                            <tr>
+                                <td class="day">10</td>
+                                <td class="supplier">Asdrubal</td>
+                                <td class="total">2000,00</td>
+                            </tr>
+                            <tr>
+                                <td class="day">11</td>
+                                <td class="supplier">Coorp</td>
+                                <td class="total">1000,00</td>
+                            </tr>
+                        </table>
+                    </div>
+                </li>
+                <li>
+                    <input type="radio" name="accordation" id="7">
+                    <label for="7">
+                        <div class="row">
+                            <span> R$ 3000,00 </span>
+                            <span> Julho</span>
+                        </div>
+                    </label>
+                    <div class="content">
+                        <table>
+                            <tr>
+                                <td class="day">Dia</td>
+                                <td class="supplier">Fornecedor</td>
+                                <td class="total">Total</td>
+                            </tr>
+                            <tr>
+                                <td class="day">10</td>
+                                <td class="supplier">Asdrubal</td>
+                                <td class="total">2000,00</td>
+                            </tr>
+                            <tr>
+                                <td class="day">11</td>
+                                <td class="supplier">Coorp</td>
+                                <td class="total">1000,00</td>
+                            </tr>
+                        </table>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <div class="bt">
+            <button class="botao">Novo Fornecedor</button>
+            <button class="botao">Nova Compra</button>
+        </div>
+    </main>
+</body>
+
+</html>
