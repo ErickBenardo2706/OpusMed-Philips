@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --ciano: #0c676b;
+    --branco: #fbfbf4;
+    --verde-agua: #99c5c6;
+    --azul-bebê: #bdd4db;
+    --cinza: #7c9496;
+    --preto: #1c1917;
+    --cinza-claro: #D9D9D9;
+
+    --titulo: "Noto Sans", sans-serif;
+    --corpo: "Poppins", sans-serif;
+}
+
+body {
+    background-color: var(--branco);
+    margin: 40px;
+}
+
+.box {
+    background-color: var(--azul-bebê);
+    margin-bottom: 5%;
+}
+
+.in_box {
+    width: auto;
+    margin: 10px;
+    background-color: var(--verde-agua);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.data {
+    background: none;
+    border: none;
+    width: 30%;
+    justify-items: center;
+}
+
+.title_box {
+    font-family: var(--corpo);
+    font-size: 20px;
+    color: var(--ciano);
+    display: flex;
+    justify-content: space-between;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 2.5rem 6rem;
+    align-items: center;
+    font-family: var(--corpo)
+}
+
+.ordenar {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    margin: 2.5rem 6rem;
+    align-items: center;
+    font-family: var(--corpo)
+}
+
+.input {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
+    background-color: var(--cinza-claro);
+    padding: 0.3rem;
+    border-radius: 1rem;
+    border: 0.1rem solid var(--cinza);
+    width: 50%;
+}
+
+.input input[type='text'] {
+    all: unset;
+    width: 50%;
+    color: var(--ciano);
+}
+
+.input_button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.input_button img {
+    align-self: center;
+    width: 1.2rem;
+    height: auto;
+}
+
+.container input {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: var(--cinza-claro);
+    padding: 0.3rem 1rem;
+    border-radius: 1rem;
+    width: 45%;
+}
+
+.categoria_suspenso {
+    width: 30%;
+    font-size: 1.1rem;
+    text-align: center;
+    align-items: center;
+    gap: 1.2rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#categoria {
+    width: 40% !important;
+    all: unset;
+    font-size: 1rem;
+    background-color: var(--cinza-claro);
+    border-radius: 1rem;
+    border: 0.1rem solid var(--cinza);
+    background-image: url(assets/angle-small-down.svg);
+    background-repeat: no-repeat;
+    background-position: right 0.8rem center;
+    background-size: 1.2rem;
+    padding: 0.3rem 0;
+}
+
+@media (max-width: 900px) {
+    .container {
+        margin: 1rem 2rem;
+    }
+
+    #categoria {
+        width: 80% !important;
+    }
+
+    .categoria_suspenso label {
+        display: none;
+    }
+
+    .input {
+        width: 70%;
+    }
+
+    .input input[Type='text'] {
+        width: 70%;
+    }
+}
+
+.bt {
+    height: 2rem;
+    width: auto;
+    background-color: var(--cinza);
+    color: var(--branco);
+    border-radius: 10px;
+    font-family: var(--corpo);
+    padding: 1px 2rem;
+}
+
+.botao {
+    display: flex;
+    gap: 10px;
+    justify-content: space-around;
+    padding-bottom: 15px;
+}
+
+.botao_confirma {
+    margin-top: 2rem;
+    bottom: 20px;
+    right: 40px;
+    display: flex;
+    gap: 10px;
+    justify-content: space-around;
+}
+
+.title p {
+    font-family: var(--corpo);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.tabela_nova_compra {
+    border-collapse: collapse;
+    border: none;
+}
+
+.tabela_nova_compra img {
+    width: 15px;
+}
+
+.tabela_nova_compra table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabela_nova_compra th,
+.tabela_nova_compra td {
+    padding: 8px 5px;
+    text-align: left;
+}
+
+.tabela_nova_compra td {
+    border-bottom: 1.5px solid var(--cinza);
+}
+
+.btn-trash {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.header {
+    background-color: var(--cinza);
+    color: var(--branco);
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+.header th {
+    margin-right: 15px;
+    padding: 5px;
+}
