@@ -70,8 +70,9 @@ menu {
 
 span {
    color: var(--cinza);
-   display: flex;;
+   display: flex;
    gap: 30px;
+   text-align: start;
 }
 
 .container {
