@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --ciano: #0c676b;
+    --branco: #fbfbf4;
+    --verde-agua: #99c5c6;
+    --azul-bebê: #bdd4db;
+    --cinza: #7c9496;
+    --preto: #1c1917;
+    --cinza-claro: #D9D9D9;
+
+    --titulo: "Noto Sans", sans-serif;
+    --corpo:  "Poppins", sans-serif;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    margin: 0 6rem;
+}
+
+ul.accordation {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    height: 50vh;
+    overflow-y: auto;
+}
+
+ul.accordation li {
+    list-style: none;
+    width: 100%;
+    border-radius: 10px;
+    background: #D9D9D9;
+    border: solid #7C9496 2px;
+    margin-top: 0.5rem;
+}
+
+ul.accordation label, .list header {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    height: 2rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.list header{
+    display: flex;
+    justify-content: start;
+    width: 100%;
+    border-radius: 10px;
+    background: #7C9496;
+    color: white;
+    font-weight: 600;
+    cursor: auto;
+}
+
+.list .row {
+    width: 90%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+.list .row span {
+    width: 40%;
+}
+
+ul.accordation label::before {
+    margin-right: 10px;
+    font-size: 24px;
+    font-weight: 600;
+    content: '>';
+    rotate: 90deg;
+}
+
+ul.accordation input[type="radio"] {
+    display: none;
+}
+
+ul.accordation .content {
+    background: #C5C5C5;
+    border-radius: 0 8px;
+    padding: 0 0.5rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s, padding 0.5s;
+}
+
+ul.accordation table {
+    width: 100%;
+}
+
+ul.accordation table tr {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: solid #7C9496 2px;
+    padding: 0.5rem 0;
+}
+
+ul.accordation table tr+tr:hover {
+    background-color: #D9D9D9;
+    cursor: pointer;
+}
+
+table .day {
+    width: 15%;
+}
+
+table .supplier {
+    width: 60%;
+}
+
+table .total {
+    width: 20%;
+}
+
+ul.accordation table tr:first-child {
+    font-weight: 600;
+}
+
+ul.accordation input[type="radio"]:checked+label+.content {
+    max-height: 400px;
+    padding: 10px 10px 20px;
+}
+
+ul.accordation input[type="radio"]:checked+label::before {
+    transform: rotate(180deg);
+}
