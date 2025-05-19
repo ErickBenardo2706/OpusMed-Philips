@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teste</title>
+
+  <style>
+  
+    body {
+      background-color: #FBFBF4;
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      text-align: center;
+
+    }
+
+    .form-group {
+      margin-bottom: 30px;
+      text-align: left;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 4px;
+            font-size: 14px;
+
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+
+    }
+
+    input {
+      background-color: #D9D9D9; 
+      width: 400px;
+      max-width: 300%;
+      padding: 10px;
+      font-size: 16px;
+      border: 2px solid #D9D9D9;
+      border-radius: 2px;
+       /* box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);*/
+
+      
+    }
+
+    img {
+      height: 150px;
+      margin-bottom: 20px;
+     
+    }
+.link-rodape {
+  position: fixed;
+  bottom: 135px;   /*  */
+  left: 51%;      
+  color: rgb(64, 65, 61);
+  font-size: 12.8px;
+  text-decoration: none;
+}
+
+  button {
+  position: fixed;
+  left: 55%;   
+  bottom: 45px;   /*  */
+  width: 150px;
+ max-width: 100%;
+      padding: 12px;
+      font-size: 18px;
+      border: 0px solid #d3d2d2;
+      border-radius: 2px;
+box-shadow: 0px 1.5px 0px rgb(184, 178, 178);
+
+  background-color: #BDD4DB;   
+}
+
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <img src="opusmed.jpg" alt="imagem OpusMed">
+
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email" />
+    </div>
+
+    <div class="form-group">
+      <label for="senha">Senha</label>
+      <input type="password" id="senha" name="senha" required>
+      <a href="https://img.freepik.com/fotos-premium/vaca-malhada-com-um-piercing-no-nariz-na-normandia-franca_524824-170.jpg" class="link-rodape">Esqueceu sua senha? Clique aqui</a>
+        <br>
+       <br><button onclick="Enviar()">Enviar</button>
+
+    </div>
+  </div>
+
+</body>
+
+</html>
