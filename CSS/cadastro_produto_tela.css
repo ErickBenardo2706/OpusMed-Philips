@@ -1,0 +1,156 @@
+.screen {
+    display: flex;
+    flex-direction: column;
+    padding-top: 2rem;
+    width: 100%;
+    max-width: 900px; /* largura máxima para evitar esticar demais */
+    margin: 0 auto;   /* centraliza dentro do main */
+}
+
+.filtro {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+    align-items: flex-start;
+}
+
+.screen input {
+    background-color: var(--cinza-claro);
+    padding: 1rem;
+    border-radius: 5px;
+    color: black;
+    border: 1.5px solid var(--cinza);
+    font-size: 15px;
+    flex: none;
+    max-height: 15px;
+    
+}
+.screen .date_input{
+    color: #00000077;
+}
+
+.medicamento_input {
+    width: 90%;
+}
+
+.mg_input {
+    width: 9.5%;
+    margin-right: 2rem;
+}
+
+.tarja_input {
+    width: 12%;
+    margin-right: 2rem;
+
+}
+
+.lote_input {
+    width: 12%;
+    margin-right: 2rem;
+
+}
+
+.quantidade_input {
+    width: 12%;
+    margin-right: 2rem;
+
+}
+
+.date_input {
+    width: 13%;
+}
+
+.bt {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 0.5rem;
+}
+
+.botao {
+    height: 2rem;
+    background-color: var(--cinza);
+    color: var(--branco);
+    border-radius: 10px;
+    font-family: var(--corpo);
+    padding: 1px 2rem;
+    border: 1.5px solid black;
+    cursor: pointer;
+}
+
+.botao:hover {
+    background-color: var(--azul-bebê-hover);
+}
+
+.list_of_information{
+    margin-top: 3%;
+}
+
+table{
+   
+    border-collapse: collapse;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto !important;
+}
+
+
+
+
+.header{
+    background-color: none;
+    color: black;
+    font-size: 17px;
+    margin-right: 5px;
+    text-align: center;
+    
+}
+
+.header th{
+    margin-right: 20px;
+        padding: 10px;
+
+
+}
+
+.lines td{
+    padding: 20px;
+    border-bottom: 1.5px solid var(--cinza);
+    
+    
+}
+
+
+.list_of_information table {
+    width: 60%;
+    border-collapse: collapse;
+     margin: 0 auto;
+     border-spacing: 25px 0
+    
+}
+
+.list_of_information th,
+.list_of_information td {
+    padding: 10px 22px;
+    text-align: center;
+}
+
+#red{
+    color: var(--vermelho);
+}
+
+.bt_confirmar{
+    position: fixed;
+    bottom: 20px;
+    right: 20%;
+    display: flex;
+    gap: 10px;
+    justify-content: space-around;
+}
+
+#trash{
+    width: 20px;
+}

@@ -1,0 +1,47 @@
+.type_product{
+    text-align: center;
+    
+}
+
+.type_product button{
+text-decoration: none;
+color: var(--branco);
+padding: 1rem;
+width: 20%;
+background-color: var(--cinza);
+border: 1px solid black;
+border-radius: 5px;
+
+}
+
+.type_product button:hover{
+    background-color: var(--azul-bebê-hover);
+    cursor: pointer;
+}
+
+.type_product label{
+    font-size: 30px;
+}
+
+.type_product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5rem;
+    gap: 1rem;
+}
+
+@media (max-width: 554px){
+    .type_product button{
+    text-decoration: none;
+    color: var(--branco);
+    padding: 1rem;
+    width: 30%;
+    background-color: var(--cinza);
+    border: 1px solid black;
+    border-radius: 5px;
+
+}
+    
+}

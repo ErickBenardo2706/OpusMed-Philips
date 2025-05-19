@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/search.css">
+    <link rel="stylesheet" href="CSS/list-item-base.css">
+    <link rel="stylesheet" href="CSS/nav-bar.css">
+    <link rel="stylesheet" href="CSS/modal-base.css">
+    <link rel='stylesheet'
+    href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel='stylesheet'
+    href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-straight/css/uicons-regular-straight.css'>
+    <link rel='stylesheet'
+    href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel='stylesheet' 
+    href='https://cdn-uicons.flaticon.com/2.6.0/uicons-thin-chubby/css/uicons-thin-chubby.css'>
+    <title>Document</title>
+    <script src="JS/menu.js"> </script> 
+</head>
+<body>
+    <header>
+        <nav class="close">
+            <button onclick="ToggleMenu()" class="button">
+                <i class="fi fi-rs-burger-menu"></i>
+                <span>Menu</span>
+            </button>
+            <div>
+                <ul>
+                    <li>
+                        <a class="button" href="#">
+                            <i class="fi fi-rr-stats"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="button" href="#">
+                            <i class="fi fi-rs-box-open-full"></i>
+                            <span>Estoque</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="button" href="#">
+                            <i class="fi fi-rr-stretcher"></i>
+                            <span>Bens</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="button" href="#">
+                            <i class="fi fi-rs-map-location-track"></i>
+                            <span>Movimento</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="button" href="#">
+                            <i class="fi fi-rs-shopping-cart-add"></i>
+                            <span>Compra</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <button class="button">
+                <i class="fi fi-rs-sign-out-alt"></i>
+                <span>Logout</span>
+            </button>
+        </nav>
+        <menu>
+                <span>Estoque</span>
+        </menu> 
+    </header>
+    <main>
+        <div class="outside close">
+            <div onclick="CloseModal(), ToggleBackground()" class="background"></div>
+        </div>
+
+        <div class="container">
+            <div class="input">
+                <input type="text"> 
+                <button class="input_button">
+                    <img src="/assets/search.svg">
+                </button>
+            </div>
+            <div class="categoria_suspenso">
+                <label for="categoria">Filtrar por: </label>
+                <select id="categoria" name="filtro">
+                    <option selected></option>
+                    <option value="epi">EPI</option>
+                    <option value="tarja">Tarja Vermelha</option>
+                    <option value="maiorq">Maior quantidade</option>
+                    <option value="menorq">Menor quantidade</option>
+                </select>
+            </div>
+        </div>
+        <section class="list">
+        <header>
+            <div class="row">
+                <span>Lista de itens</span>
+            </div>
+        </header>
+        <ul class="accordation">
+            <li>
+                <input type="radio" name="accordation" id="1" checked>
+                <label for="1">
+                    <div class="row">
+                        <span> Tadalafila</span>
+                    </div>
+                </label>
+                <div class="content">
+                    <table>
+                        <tr>
+                            <td class="dose">Dose</td>
+                            <td class="lote">Número Lote</td>
+                            <td class="quantidade">Quantidade</td>
+                            <td class="tarja">Tarja</td>
+                        </tr>
+                        <tr>
+                            <td class="dose">350mg</td>
+                            <td class="lote">5434232</td>
+                            <td class="quantidade">35</td>
+                            <td class="tarja">V</td>
+                        </tr>
+                        <tr>
+                            <td class="dose">350mg</td>
+                            <td class="lote">5434232</td>
+                            <td class="quantidade">250   </td>
+                            <td class="tarja">V</td>
+                        </tr>
+                    </table>
+                </div>
+            </li>   
+            <li>
+                <input type="radio" name="accordation" id="2" checked>
+                <label for="2">
+                    <div class="row">
+                        <span> Amoxicilina</span>
+                    </div>
+                </label>
+                <div class="content">
+                    <table>
+                        <tr>
+                            <td class="dose">Dose</td>
+                            <td class="lote">Número Lote</td>
+                            <td class="quantidade">Quantidade</td>
+                            <td class="tarja">Tarja</td>
+                        </tr>
+                        <tr>
+                            <td class="dose">350mg</td>
+                            <td class="lote">5434232</td>
+                            <td class="quantidade">35</td>
+                            <td class="tarja">v</td>
+                        </tr>
+                        <tr>
+                            <td class="dose">350mg</td>
+                            <td class="lote">5434232</td>
+                            <td class="quantidade">250   </td>
+                            <td class="tarja">v</td>
+                        </tr>
+                    </table>
+                </div>
+            </li>      
+        </ul>
+    </section>               
+    </main>
+</body>
+</html>

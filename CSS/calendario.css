@@ -1,0 +1,14 @@
+.calendario {
+    display: flex;
+    justify-content: center;
+    
+    padding: 2rem;
+    margin: 0 auto;
+
+    position: relative;
+    top: 50%;
+    text-align: center;
+    min-width: 860px;
+    z-index: -1;
+    
+}
