@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teste</title>
+
+<nav class="close">
+        <button onclick="ToggleMenu()" class="button">
+            <i class="fi fi-rs-burger-menu"></i>
+            <span>Menu</span>
+        </button>
+        <div>
+            <ul>
+                <li>
+                    <a class="button" href="#">
+                        <i class="fi fi-rr-stats"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="button" href="#">
+                        <i class="fi fi-rs-box-open-full"></i>
+                        <span>Estoque</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="button" href="#">
+                        <i class="fi fi-rr-stretcher"></i>
+                        <span>Bens</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="button" href="#">
+                        <i class="fi fi-rs-map-location-track"></i>
+                        <span>Movimento</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="button" href="#">
+                        <i class="fi fi-rs-shopping-cart-add"></i>
+                        <span>Compra</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <button class="button">
+            <i class="fi fi-rs-sign-out-alt"></i>
+            <span>Logout</span>
+        </button>
+    </nav>
+
+  <style>
+    body {
+      background-color: #FBFBF4;
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column; /* organiza em coluna (de cima pra baixo) */
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+    }
+
+    .grupo1, .grupo2 {
+      display: flex;
+      justify-content: center;
+      gap: 300px; /* espaço entre as imagens */
+      margin-bottom: 50px; /* espaço entre os grupos */
+    }
+
+    img {
+      width: 250px; /* tamanho das imagens */
+      height: auto;
+      border-radius: 10px;
+    }
+  </style>
+
+
+<script>
+        function ToggleMenu() {
+            const nav = document.querySelector('nav');
+            nav.classList.toggle('close');
+            nav.classList.toggle('open');
+            const outside = document.getElementsByClassName('outside')[0];
+            if (!outside.classList.contains('close'))
+                CloseModal();
+            if (nav.classList.contains('open'))
+                outside.classList.remove('close');
+            else
+                outside.classList.add('close');
+        }
+
+        function ToggleBackground() {
+            const outside = document.getElementsByClassName('outside')[0];
+            const nav = document.querySelector('nav');
+            outside.classList.toggle('close');
+            nav.classList.add('close');
+            nav.classList.remove('open');
+        }
+
+        function CloseModal() {
+            const modals = document.getElementsByClassName('modal');
+            [...modals].forEach(modal => {
+                modal.classList.add('close');
+            })
+        }
+
+        function OpenModal(id) {
+            const modal = document.getElementById(id);
+            modal.classList.remove('close');
+            ToggleBackground();
+        }
+    </script>  
+
+
+</head>
+
+<body>
+  <div class="grupo1">
+    <img src="imageum.jpg" alt="imagem 1">
+    <img src="imagedois.jpg" alt="imagem 2">
+  </div>
+
+  <div class="grupo2">
+    <img src="imagetres.jpg" alt="imagem 3">
+    <img src="imagequatro.jpg" alt="imagem 4">
+  </div>
+</body>
+
+</html>
