@@ -53,4 +53,5 @@
 
 .modal button {
     all: unset;
+    cursor: pointer;
 }

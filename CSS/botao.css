@@ -1,0 +1,24 @@
+.button-container {
+    position: fixed;
+    bottom: 6vh;
+    right: 2rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.botao {
+    height: 2rem;
+    padding: 0 2rem;
+    border: solid 2px var(--ciano);
+    border-radius: 10px;
+    font-family: var(--corpo);
+
+    background: var(--cinza);
+    color: var(--branco);
+    transition: 0.2s;
+}
+
+.botao:hover{
+    color: var(--ciano);
+    background: var(--branco);
+}
