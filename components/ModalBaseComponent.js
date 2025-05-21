@@ -6,7 +6,7 @@ export const ModalBaseComponent = {
             <div>
                 <span><b>${props.title} - </b>${props.subtitle}</span>
             </div>
-            <button onclick="CloseModal(), ToggleBackground()">
+            <button class="x" onclick="CloseModal(), ToggleBackground()">
                 <i class="fi fi-rr-cross-small"></i>
             </button>
         </header>

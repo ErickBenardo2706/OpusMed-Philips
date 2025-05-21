@@ -3,6 +3,7 @@ import { DashboardComponent } from '../components/DashboardComponent.js';
 import { EstoqueComponent } from '../components/EstoqueComponent.js';
 import { ComprasComponent } from '../components/ComprasComponent.js';
 import { BensComponent } from '../components/BensComponent.js';
+import { NovaCompraComponent } from '../components/NovaCompraComponent.js';
 
 
 export const LoginPage = {
@@ -33,6 +34,11 @@ export const MovimentosPage = {
 export const ComprasPage = {
   render: () => {
     return LayoutComponent.render(ComprasComponent.render(), "Compras");
+  }
+};
+export const NovaCompraPage = {
+  render: () => {
+    return LayoutComponent.render(NovaCompraComponent.render(), "Nova Compra");
   }
 };
 
