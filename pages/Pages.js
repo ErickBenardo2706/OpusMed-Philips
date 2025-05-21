@@ -3,6 +3,9 @@ import { DashboardComponent } from '../components/DashboardComponent.js';
 import { EstoqueComponent } from '../components/EstoqueComponent.js';
 import { ComprasComponent } from '../components/ComprasComponent.js';
 import { BensComponent } from '../components/BensComponent.js';
+import { CadastroMedicamentoComponent} from '../components/CadastroMedicamentoComponent.js';
+import { CadastroBemComponent } from '../components/CadastroBemComponent.js';
+import { CadastroEPIComponent } from '../components/CadastroEPIComponent.js';
 
 
 export const LoginPage = {
@@ -35,4 +38,24 @@ export const ComprasPage = {
     return LayoutComponent.render(ComprasComponent.render(), "Compras");
   }
 };
+
+export const CadastroMedicamentoPage = {
+  render: () => {
+    return LayoutComponent.render(CadastroMedicamentoComponent.render(), "Cadastrar Medicamento");
+  }
+};
+
+export const CadastroBemPage = {
+  render: () => {
+    return LayoutComponent.render(CadastroBemComponent.render(), "Cadastrar Patrimônio");
+  }
+};
+
+export const CadastroEPIPage = {
+  render: () => {
+    return LayoutComponent.render(CadastroEPIComponent.render(), "Cadastrar EPI's");
+  }
+};
+
+
 
