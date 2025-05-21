@@ -1,3 +1,5 @@
+import { SetModal } from "../js/modal.js";
+
 export const ListItemComponent = {
     render: (props = {}) => {
         return `
@@ -14,7 +16,7 @@ export const ListItemComponent = {
                     <table>
                         ${props.items.map((content) => {
                             return `
-                                <tr onclick="OpenModal('notaFiscal')">
+                                <tr onclick="OpenModal(${content.modal})">
                                     ${Object.keys(content).map((key) => {
                                         return `<td>${content[key]}</td>`;
                                     }).join('')}

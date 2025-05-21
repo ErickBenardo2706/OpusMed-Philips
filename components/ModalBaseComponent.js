@@ -1,7 +1,7 @@
 export const ModalBaseComponent = {
     render: (props = {}) => {
         return `
-    <div id="${props.id}" class="modal close">
+    <div id="modal" class="modal close">
         <header>
             <div>
                 <span><b>${props.title} - </b>${props.subtitle}</span>

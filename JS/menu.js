@@ -1,3 +1,5 @@
+import { SetModal } from "./modal.js";
+
 function ToggleMenu() {
     const nav = document.querySelector('nav');
     nav.classList.toggle('close');
@@ -20,14 +22,11 @@ function ToggleBackground() {
 }
 
 function CloseModal() {
-    const modals = document.getElementsByClassName('modal');
-    [...modals].forEach(modal => {
-        modal.classList.add('close');
-    })
+    document.getElementById("modal").classList.add('close');
 }
 
-function OpenModal(id) {
-    const modal = document.getElementById(id);
-    modal.classList.remove('close');
+function OpenModal(props) {
+    SetModal(props);
+    document.getElementById("modal").classList.remove('close');
     ToggleBackground();
 }

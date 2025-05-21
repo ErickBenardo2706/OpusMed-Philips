@@ -1,4 +1,4 @@
-import { AboutComponent } from "./AboutComponent.js";
+import { DisplayModal } from "../js/modal.js";
 import { HeaderComponent } from "./HeaderComponent.js";
 import { MenuComponent } from "./MenuComponent.js";
 import { ModalBaseComponent } from "./ModalBaseComponent.js";
@@ -9,11 +9,7 @@ export const LayoutComponent = {
       <div>
         <div class="outside close">
             <div onclick="CloseModal(), ToggleBackground()" class="background"></div>
-            ${ModalBaseComponent.render({
-              id: "modal1",
-              title: "Titulo",
-              subtitle: "Subtitulo legal",
-            })}
+            ${DisplayModal()}
         </div>
         ${HeaderComponent.render()}
         ${MenuComponent.render(title)}
