@@ -1,9 +1,15 @@
+import { ToggleMenu } from "../js/menu.js";
+
 export const HeaderComponent = {
     render: () => {
+        setTimeout(() => {
+            const el = document.getElementById("menu-button");
+            if (el) el.addEventListener("click", ToggleMenu);
+        }, 0);
         return `
         <header>
             <nav class="close">
-                <button onclick="ToggleMenu()" class="button">
+                <button id="menu-button" class="button">
                     <i class="fi fi-rs-burger-menu"></i>
                     <span>Menu</span>
                 </button>

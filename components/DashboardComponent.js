@@ -1,16 +1,12 @@
+import { OpenModal } from "../js/modal.js";
+import { ButtonComponent } from "./ButtonComponent.js";
 
 
 export const DashboardComponent = {
   render: () => {
-
     return `
       <section>
-        <h1>Página Inicial</h1>
-        <p>Conteúdo da Home.</p>
-
-        <div>
-          <h2>Sobre nós (incluso aqui):</h2>
-        </div>
+        ${ButtonComponent.render({ id: "compra", label: "Nova Compra", funcao: OpenModal, props: { title: "Título", subtitle: "AAAA" }})}
       </section>
     `;
   }

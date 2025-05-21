@@ -1,11 +1,23 @@
 import { ModalBaseComponent } from "../components/ModalBaseComponent.js";
-// {title: "Título", subtitle: "Subtítulo"}
-let currentModal;
+import { ToggleBackground } from "./menu.js";
+
+let currentModal = ModalBaseComponent.render({title: "Título", subtitle: "Subtítulo"});
 
 export function SetModal(props){
-    currentModal = ModalBaseComponent.render(props)
+    document.getElementById("modal").innerHTML = ModalBaseComponent.render(props);
+    console.log(currentModal);
+}
+
+export function OpenModal(props) {
+    SetModal(props);
+    document.getElementById("modal").classList.remove('close');
+    ToggleBackground()
 }
 
 export function DisplayModal(){
     return currentModal;
+}
+
+export function CloseModal() {
+    document.getElementById("modal").classList.add('close');
 }

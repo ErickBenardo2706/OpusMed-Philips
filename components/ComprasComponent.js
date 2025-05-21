@@ -23,13 +23,13 @@ export const ComprasComponent = {
               day: "10",
               supplier: "Asdrubal",
               total: "600,00",
-              
+
             },
             {
               day: "11",
               supplier: "Coorp",
               total: "400,00",
-              
+
             },
           ]
         },
@@ -46,13 +46,13 @@ export const ComprasComponent = {
               day: "10",
               supplier: "Asdrubal",
               total: "600,00",
-              
+
             },
             {
               day: "11",
               supplier: "Coorp",
               total: "400,00",
-              
+
             },
           ]
         },
@@ -64,8 +64,7 @@ export const ComprasComponent = {
           ${filter}
           ${list}
           <div class="button-container">
-            ${ButtonComponent.render({ label: "Nova Compra" })}
-            ${ButtonComponent.render({ label: "Novo Fornecedor" })}
+            
           </div>
       </section>
     `;

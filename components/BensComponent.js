@@ -108,7 +108,6 @@ export const BensComponent = {
           ${filter}
           ${list}
           <div class="button-container">
-            ${ButtonComponent.render({ label: "Novo Bem" })}
           </div>
       </section>
     `;
