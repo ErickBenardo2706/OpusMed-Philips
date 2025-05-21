@@ -5,10 +5,10 @@ let currentModal = ModalBaseComponent.render({title: "T√≠tulo", subtitle: "Subt√
 
 export function SetModal(props){
     document.getElementById("modal").innerHTML = ModalBaseComponent.render(props);
-    console.log(currentModal);
 }
 
 export function OpenModal(props) {
+    console.log(props.component);
     SetModal(props);
     document.getElementById("modal").classList.remove('close');
     ToggleBackground()

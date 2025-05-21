@@ -15,8 +15,8 @@ export function ToggleMenu() {
 
 export function ToggleBackground() {
     const outside = document.getElementsByClassName('outside')[0];
-    const nav = document.querySelector('nav');
     outside.classList.toggle('close');
+    const nav = document.querySelector('nav');
     nav.classList.add('close');
     nav.classList.remove('open');
 }

@@ -1,4 +1,5 @@
-import { SetModal } from "../js/modal.js";
+import { ToggleBackground } from "../js/menu.js";
+import { OpenModal } from "../js/modal.js";
 
 export const ListItemComponent = {
     render: (props = {}) => {
@@ -9,23 +10,36 @@ export const ListItemComponent = {
                     <div class="row">
                         ${props.columns?.map((content) => {
                             return `<span>${content}</span>`;
-                        }).join('')}
+                        }).join("")}
                     </div>
                 </label>
                 <div class="content">
                     <table>
-                        ${props.items.map((content) => {
+                        ${props.items.map((content,index) => {
+                            if(index!=0 && content.component){
+                                setTimeout(() => {
+                                    const el = document.getElementById(`${props.id}-row-${index}`);
+                                    if (el) el.addEventListener("click", () => {
+                                        OpenModal({
+                                            title: content.component.title,
+                                            subtitle: content.component.subtitle,
+                                            component: content.component.body
+                                        });
+                                    });
+                                }, 0);
+                            }
                             return `
-                                <tr onclick="OpenModal(${content.modal})">
+                                <tr id="${props.id}-row-${index}">
                                     ${Object.keys(content).map((key) => {
-                                        return `<td>${content[key]}</td>`;
-                                    }).join('')}
+                                        if (key != "component")
+                                            return `<td>${content[key]}</td>`;
+                                    }).join("")}
                                 </tr>
                             `;
-                        }).join('')}
+                        }).join("")}
                     </table>
                 </div>
             </li>
         `;
-    }
+    },
 };

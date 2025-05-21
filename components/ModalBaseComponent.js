@@ -1,7 +1,7 @@
 import { CloseModal } from "../js/modal.js";
 
 export const ModalBaseComponent = {
-    render: (props = {}) => {
+    render: (props = {}) => { 
         setTimeout(() => {
             const el = document.getElementById("close-modal");
             if (el) el.addEventListener("click", () => { CloseModal() });
