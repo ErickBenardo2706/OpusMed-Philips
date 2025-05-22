@@ -14,12 +14,14 @@ export const CadastroComponent = {
                     ${InputComponent.render({type: "text", placeholder: "Tarja:"})}
                     ${InputComponent.render({type: "text", placeholder: "Lote:"})}
                     ${InputComponent.render({type: "text", placeholder: "Quantidade:"})}
+                    ${InputComponent.render({type: "text", placeholder: "Fornecedor:"})} 
                 </div>
                 <div class="linha-baixo">   
                     ${InputComponent.render({type: "text", placeholder: "Valor unitário:"})} 
-                    ${InputComponent.render({type: "text", placeholder: "Fornecedor:"})} 
                     <input type="text" placeholder="Data Validade:" onfocus="(this.type='date')" onblur="(this.type='text')" name="data" class="date_input">  
                     <input type="text" placeholder="Data Fabricação:" onfocus="(this.type='date')" onblur="(this.type='text')" name="data" class="date_input">  
+                    <input type="text" placeholder="Última manutenção:" onfocus="(this.type='date')" onblur="(this.type='text')" name="data" class="date_input">  
+                    <input type="text" placeholder="Próxima manutenção:" onfocus="(this.type='date')" onblur="(this.type='text')" name="data" class="date_input">  
                 </div>
                 <div class="bt"> 
                     ${ButtonComponent.render({label: "Adicionar"})}
