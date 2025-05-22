@@ -27,7 +27,7 @@
 .modal {
     z-index: 10;
     border: solid 2px var(--cinza);
-    width: 900px;
+    width: 60vw;
     max-height: 80vh;
     border-radius: 10px;
     background: var(--branco);
@@ -44,14 +44,7 @@
     font-size: 2rem;
 }
 
-.modal section {
-    padding: 0.5rem 1rem;
-    display: flex;
-    align-content: space-between;
-    justify-content: space-between;
-}
-
-.modal button {
+.modal button.x {
     all: unset;
     cursor: pointer;
 }

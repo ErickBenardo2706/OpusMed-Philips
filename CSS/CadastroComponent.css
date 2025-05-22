@@ -1,0 +1,40 @@
+.screen {
+    display: flex;
+    flex-direction: column;
+    padding-top: 2rem;
+    width: 100%;
+    max-width: 1000px; /* largura máxima para evitar esticar demais */
+    margin: 0 auto;  
+}
+
+
+.filtro {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+    align-items: flex-start;
+}
+
+.screen input {
+    background-color: var(--cinza-claro);
+    padding: 1rem;
+    border-radius: 5px;
+    color: black;
+    border: 1.5px solid var(--cinza);
+    font-size: 15px;
+    flex: none;
+    max-height: 15px;
+    
+}
+
+.linha-baixo {
+    display: grid;
+    /* grid-template-columns: repeat(auto-fit, minmax(2fr,2fr)); */
+    width: 100%;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+    grid-auto-rows: auto;
+}
+
+
+

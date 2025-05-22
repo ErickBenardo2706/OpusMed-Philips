@@ -1,20 +1,21 @@
+import { CloseModal } from "../js/modal.js";
+
 export const ModalBaseComponent = {
-    render: (props = {}) => {
+    render: (props = {}) => { 
+        setTimeout(() => {
+            const el = document.getElementById("close-modal");
+            if (el) el.addEventListener("click", () => { CloseModal() });
+        }, 0);
         return `
-    <div id="modal" class="modal close">
         <header>
             <div>
                 <span><b>${props.title} - </b>${props.subtitle}</span>
             </div>
-            <button onclick="CloseModal(), ToggleBackground()">
+            <button id="close-modal">
                 <i class="fi fi-rr-cross-small"></i>
             </button>
         </header>
         ${props.component}
-    </div>
     `;
     }
 };
-
-
-

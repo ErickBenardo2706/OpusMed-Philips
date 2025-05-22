@@ -1,0 +1,9 @@
+.inputComponent {
+    background-color: var(--cinza-claro);
+    padding: 1rem;
+    border-radius: 5px;
+    color: var(--ciano);
+    border: 1.5px solid var(--cinza);
+    font-size: 1rem;
+    width: 100%; 
+}

@@ -7,7 +7,7 @@
 }
 
 .botao {
-    height: 2rem;
+    height: var(--input-height);
     padding: 0 2rem;
     border: solid 2px var(--ciano);
     border-radius: 10px;
