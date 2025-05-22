@@ -1,5 +1,11 @@
 export const NotaFiscalComponent = {
     render: (props = {}) => {
+        let valorTotal = 0
+        let qntTotal = 0
+        props.detalhe.map((content)=>{
+            qntTotal += content.quantidade;
+            valorTotal += content.valor*content.quantidade;
+        })
         return `
             <section>
               <div class="personal_data">
@@ -40,16 +46,16 @@ export const NotaFiscalComponent = {
                                 <td>${content.quantidade}</td>
                                 <td>${content.nome}</td>
                                 <td>${content.valor}</td>
-                                <td>${content.valor * content.quantidade}</td>
+                                <td>R$${(content.valor * content.quantidade).toFixed(2)}</td>
                             </tr>
                             `
                           })}
 
                           <tr class="total">
-                              <td>Total: </td>
+                              <td>Total: ${qntTotal}</td>
                               <td></td>
                               <td></td>
-                              <td>900</td>
+                              <td>R$${valorTotal.toFixed(2)}</td>
                           </tr>
                       </table>
 

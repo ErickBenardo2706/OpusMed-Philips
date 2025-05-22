@@ -1,3 +1,4 @@
+import { ButtonComponent } from "./ButtonComponent.js";
 import { FilterComponent } from "./FilterComponent.js";
 import { ListBaseComponent } from "./ListBaseComponent.js";
 import { NotaFiscalComponent } from "./NotaFiscalComponent.js";
@@ -22,7 +23,7 @@ export const ComprasComponent = {
             {
               day: "10",
               supplier: "Asdrubal",
-              total: "600,00",
+              total: "550,00",
               component: {
                 title: "AAAA",
                 subtitle: "XX/XX/XXXX",
@@ -55,7 +56,6 @@ export const ComprasComponent = {
           ${filter}
           ${list}
           <div class="button-container">
-            
           </div>
       </section>
     `;
