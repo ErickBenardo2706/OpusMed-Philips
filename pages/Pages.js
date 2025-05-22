@@ -9,11 +9,6 @@ import { NovaCompraComponent } from '../components/NovaCompraComponent.js';
 import { MovimentoDiaComponente } from '../components/MovimentoDiaComponente.js';
 
 
-export const LoginPage = {
-  render: () => {
-    return LayoutComponent.render(DashboardComponent.render(), "Login");
-  }
-};
 export const DashboardPage = {
   render: () => {
     return LayoutComponent.render(DashboardComponent.render(), "Dashboard");
