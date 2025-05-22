@@ -44,7 +44,7 @@
     font-size: 2rem;
 }
 
-.modal button {
+.modal button.x {
     all: unset;
     cursor: pointer;
 }
