@@ -1,4 +1,3 @@
-import { ButtonComponent } from './ButtonComponent.js';
 import { FilterComponent } from './FilterComponent.js';
 import { ListBaseComponent } from './ListBaseComponent.js';
 
@@ -8,7 +7,7 @@ export const BensComponent = {
       descricao: "Somos uma equipe apaixonada por JavaScript puro!"
     });
     const list = ListBaseComponent.render({
-      columns: ["Nome do bem", "Quantidade Total"],
+      columns: ["Nome", "Quantidade Total"],
       items: [
         {
           id: 1,

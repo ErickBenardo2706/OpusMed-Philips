@@ -2,7 +2,7 @@ export const TableComponent = {
     render: (props ={}) => {
         return `
     
-    <div class="tabela_nova_compra">
+    <div class="table-component">
         <table>
             ${props.items.map((content) => {
                 return `

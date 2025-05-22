@@ -1,4 +1,4 @@
-.container {
+.search-container {
     display: flex;
     justify-content: space-between;
     margin-bottom: 2rem;
@@ -6,7 +6,7 @@
     font-family: var(--corpo)
 }
 
-.input {
+.search-container .input {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -18,13 +18,13 @@
     width: 60%;
 }
 
-.input input[type='text']{
+.search-container .input input[type='text']{
     all: unset;
     width: 80%;
     color: var(--ciano);
 }
 
-.input_button {
+.search-container .input_button {
     background: none;
     border: none;
     padding: 0;
@@ -32,13 +32,13 @@
 
 }
 
-.input_button img{
+.search-container .input_button img{
     align-self: center;
     width: 1.2rem;
     height: auto;
 }
 
-.categoria_suspenso{
+.search-container .categoria_suspenso{
     width: 30%;
     font-size: 1.1rem;
     text-align: left;
@@ -65,7 +65,7 @@
 }
 
 @media (max-width: 900px) {
-    .container{
+    .search-container{
         font-size: 0.8rem;
     }
 
@@ -80,15 +80,15 @@
         padding-right: 0.8rem;
     }
 
-    .categoria_suspenso label {
+    .search-container .categoria_suspenso label {
         display: none;
     }
 
-    .input {
+    .search-container .input {
         width: 70%;
     }
 
-    .input input[Type='text']{
+    .search-container .input input[Type='text']{
         width: 70%;
     }
     

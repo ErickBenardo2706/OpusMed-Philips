@@ -1,7 +1,3 @@
-body{
-  background-color:#FBFBF4;
-}
-
 .login-container {
   position: fixed;
   left: 0;
@@ -15,27 +11,25 @@ body{
   
 }
 
-img {
+.login-container img {
   height: 150px;
   margin-bottom: 30px;
 }
 
-.form-group {
+.login-container .form-group {
   margin-bottom: 0.5rem;
   text-align: left;
 }
 
-label {
+.login-container label {
   display: block;
   margin-bottom: 4px;
   font-size: 14px;
-
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
-
 }
 
 
-input {
+.login-container input {
   background-color: #D9D9D9;
   width: 400px;
   max-width: 300%;
@@ -46,14 +40,7 @@ input {
   
 }
 
-img {
-  height: 150px;
-  margin-bottom: 20px;
-
-}
-
-.link-rodape {
-  /*  */
+.login-container .link-rodape {
   left: 48.7%;
   color: rgb(64, 65, 61);
   font-size: 12.8px;

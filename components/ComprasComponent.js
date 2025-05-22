@@ -1,3 +1,4 @@
+import { ChangePage } from "../js/button.js";
 import { ButtonComponent } from "./ButtonComponent.js";
 import { FilterComponent } from "./FilterComponent.js";
 import { ListBaseComponent } from "./ListBaseComponent.js";
@@ -36,7 +37,22 @@ export const ComprasComponent = {
                     telefone: "(011) 4402-8922",
                     email: "contato@asdrubal.com",
                   },
-                  detalhe:[
+                  detalhe: [
+                    {
+                      quantidade: 10,
+                      nome: "Rivotril",
+                      valor: 55,
+                    },
+                    {
+                      quantidade: 10,
+                      nome: "Rivotril",
+                      valor: 55,
+                    },
+                    {
+                      quantidade: 10,
+                      nome: "Rivotril",
+                      valor: 55,
+                    },
                     {
                       quantidade: 10,
                       nome: "Rivotril",
@@ -50,12 +66,19 @@ export const ComprasComponent = {
         },
       ],
     });
+    const button = ButtonComponent.render({
+      id: "nova-compra",
+      label: "Nova compra",
+      funcao: ChangePage,
+      props: "#/nova-compra"
+    })
 
     return `
       <section>
           ${filter}
           ${list}
           <div class="button-container">
+            ${button}
           </div>
       </section>
     `;

@@ -1,7 +1,7 @@
 export const FilterComponent = {
     render: () => {
         return `
-       <div class="container">
+       <div class="search-container">
             <div class="input">
                 <input type="text"> 
                 <button class="input_button">

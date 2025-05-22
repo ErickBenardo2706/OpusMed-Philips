@@ -49,7 +49,7 @@ export const NotaFiscalComponent = {
                                 <td>R$${(content.valor * content.quantidade).toFixed(2)}</td>
                             </tr>
                             `
-                          })}
+                          }).join('')}
 
                           <tr class="total">
                               <td>Total: ${qntTotal}</td>

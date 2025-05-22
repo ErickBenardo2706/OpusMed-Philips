@@ -25,7 +25,7 @@
 }
 
 .modal {
-    z-index: 10;
+    z-index: 12;
     border: solid 2px var(--cinza);
     width: 60vw;
     max-height: 80vh;

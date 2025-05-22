@@ -1,4 +1,6 @@
+import { OpenModal } from '../js/modal.js';
 import { ButtonComponent } from './ButtonComponent.js';
+import { CadastroComponent } from './CadastroComponent.js';
 import { FilterComponent } from './FilterComponent.js';
 import { ListBaseComponent } from './ListBaseComponent.js';
 
@@ -8,11 +10,11 @@ export const EstoqueComponent = {
       descricao: "Somos uma equipe apaixonada por JavaScript puro!"
     });
     const list = ListBaseComponent.render({
-      columns: ["Nome do produto"],
+      columns: ["Nome", "Tipo"],
       items: [
         {
           id: 1,
-          columns: ["Tadalafila"],
+          columns: ["Tadalafila", "Medicamento"],
           items: [
             {
               dose: "Dose",
@@ -36,31 +38,23 @@ export const EstoqueComponent = {
         },
         {
           id: 2,
-          columns: ["Rivotril"],
+          columns: ["Luva", "EPI's"],
           items: [
             {
-              dose: "Dose",
               lote: "Nº Lote",
+              validade: "Validade",
               quantidade: "Quantidade",
-              tarja: "Tarja",
             },
             {
-              dose: "10mg",
-              lote: "400289",
-              quantidade: "350",
-              tarja: "Sem Tarja",
-            },
-            {
-              dose: "20mg",
-              lote: "400290",
-              quantidade: "200",
-              tarja: "Sem Tarja",
+              lote: "13532",
+              validade: "05/2026",
+              quantidade: "70",
             },
           ]
         },
         {
           id: 3,
-          columns: ["Amoxilina"],
+          columns: ["Amoxilina", "Medicamento"],
           items: [
             {
               dose: "Dose",
@@ -84,35 +78,41 @@ export const EstoqueComponent = {
         },
         {
           id: 4,
-          columns: ["Cimegripe"],
+          columns: ["Máscara", "EPI's"],
           items: [
             {
-              dose: "Dose",
               lote: "Nº Lote",
+              validade: "Validade",
               quantidade: "Quantidade",
-              tarja: "Tarja",
             },
             {
-              dose: "10mg",
-              lote: "400289",
-              quantidade: "350",
-              tarja: "Sem Tarja",
-            },
-            {
-              dose: "20mg",
-              lote: "400290",
-              quantidade: "200",
-              tarja: "Sem Tarja",
+              lote: "13532",
+              validade: "05/2026",
+              quantidade: "70",
             },
           ]
         },
       ]
     })
+    const button = ButtonComponent.render({
+      id: "adicionar-produto",
+      label: "Adicionar",
+      funcao: OpenModal,
+      props:{
+        title: "Adicionar",
+        subtitle: "a",
+        component: CadastroComponent.render()
+      }
+    })
+
 
     return `
       <section>
           ${filter}
           ${list}
+          <div class="button-container">
+            ${button}
+          </div>
       </section>
     `;
   }

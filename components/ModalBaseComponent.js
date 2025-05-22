@@ -11,7 +11,7 @@ export const ModalBaseComponent = {
             <div>
                 <span><b>${props.title} - </b>${props.subtitle}</span>
             </div>
-            <button id="close-modal">
+            <button class="x" id="close-modal">
                 <i class="fi fi-rr-cross-small"></i>
             </button>
         </header>

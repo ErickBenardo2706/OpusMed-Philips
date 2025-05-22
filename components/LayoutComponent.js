@@ -13,9 +13,9 @@ export const LayoutComponent = {
     }, 0);
     return `
       <div>
-        <div class="outside close">
+        <div id="background" class="outside close">
             <div onclick="CloseModal(), ToggleBackground()" class="background"></div>
-            <div id="modal" class="close"></div>
+            <div id="modal" class="modal close"></div>
         </div>
         ${HeaderComponent.render()}
         ${MenuComponent.render(title)}
