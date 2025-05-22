@@ -15,12 +15,7 @@ export const LayoutComponent = {
       <div>
         <div class="outside close">
             <div onclick="CloseModal(), ToggleBackground()" class="background"></div>
-            ${ModalBaseComponent.render({
-              id: "modal1",
-              title: "Nova Compra",
-              subtitle: "Subtitulo legal",
-              component: NovaCompraComponent.render(),
-            })}
+            <div id="modal" class="close"></div>
         </div>
         ${HeaderComponent.render()}
         ${MenuComponent.render(title)}

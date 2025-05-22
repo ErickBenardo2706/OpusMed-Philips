@@ -1,7 +1,3 @@
-import { OpenModal } from "../js/modal.js";
-import { ButtonComponent } from "./ButtonComponent.js";
-
-
 export const DashboardComponent = {
   render: () => {
     return `

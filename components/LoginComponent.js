@@ -1,3 +1,4 @@
+import { ChangePage } from "../js/button.js";
 import { ButtonComponent } from "./ButtonComponent.js";
 
 export const LoginComponent = {
@@ -13,7 +14,7 @@ export const LoginComponent = {
             </form>
             <a href="https://img.freepik.com/fotos-premium/vaca-malhada-com-um-piercing-no-nariz-na-normandia-franca_524824-170.jpg" class="link-rodape">Esqueceu sua senha? Clique aqui</a>
             <div>
-                ${ButtonComponent.render({label:"Enviar"})}
+                ${ButtonComponent.render({id: "login-button", label:"Enviar", funcao: ChangePage, props: "#/dashboard"})}
             </div>
         </div>
     `;
