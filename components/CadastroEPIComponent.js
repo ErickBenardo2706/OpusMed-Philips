@@ -9,7 +9,7 @@ export const CadastroEPIComponent = {
                 ${InputComponent.render({type: "text", placeholder: "EPI:"})}
                 <div class="linha-baixo">
                     ${InputComponent.render({type: "text", placeholder: "Lote:"})}
-                    <input type="text" placeholder="Data Compra:" onfocus="(this.type='date')" onblur="(this.type='text') name="data" class="date_input">  
+                    <input type="text" placeholder="Data Compra:" onfocus="(this.type='date')" onblur="(this.type='text')" name="data" class="date_input">  
                     <input type="text" placeholder="Data Validade:" onfocus="(this.type='date')" onblur="(this.type='text')" name="data" class="date_input">  
                 </div>
                 <div class="bt"> 

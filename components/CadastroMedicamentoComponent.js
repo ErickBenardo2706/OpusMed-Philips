@@ -12,7 +12,7 @@ export const CadastroMedicamentoComponent = {
                     ${InputComponent.render({type: "text", placeholder: "Tarja:"})}
                     ${InputComponent.render({type: "text", placeholder: "Lote:"})}
                     ${InputComponent.render({type: "text", placeholder: "Quantidade:"})}
-                    <input type="text" placeholder="Data Compra:" onfocus="(this.type='date')" onblur="(this.type='text') name="data" class="date_input">  
+                    <input type="text" placeholder="Data Compra:" onfocus="(this.type='date')" onblur="(this.type='text')" name="data" class="date_input">  
                 </div>
                 <div class="bt"> 
                     ${ButtonComponent.render({label: "Adicionar"})}
