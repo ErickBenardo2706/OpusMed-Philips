@@ -35,15 +35,6 @@ export const NovaCompraPage = {
   }
 };
 
-export const CadastroPage = {
-  render: () => {
-    return LayoutComponent.render(CadastroComponent.render(), "Cadastrar Medicamento");
-  }
-};
-
-
-
-
 export const MovimentoDiaPage = {
   render: () => {
     return LayoutComponent.render(MovimentoDiaComponente.render(), "Movimentos");

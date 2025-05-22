@@ -22,3 +22,9 @@
     color: var(--ciano);
     background: var(--branco);
 }
+
+@media (max-width: 800px) {
+    .botao{
+        font-size: 0.7rem;
+    } 
+}

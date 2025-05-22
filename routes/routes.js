@@ -9,6 +9,5 @@ export const routes = [
   { path: "/bens", component: BensPage },
   { path: "/movimentos", component: MovimentoDiaPage },
   { path: "/compras", component: ComprasPage },
-  { path: "/cadastro-produto", component: CadastroPage},
   { path: "/nova-compra", component: NovaCompraPage },
 ];

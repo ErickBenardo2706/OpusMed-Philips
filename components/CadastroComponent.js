@@ -21,12 +21,11 @@ export const CadastroComponent = {
                     <input type="text" placeholder="Data Validade:" onfocus="(this.type='date')" onblur="(this.type='text')" name="data" class="date_input">  
                     <input type="text" placeholder="Data Fabricação:" onfocus="(this.type='date')" onblur="(this.type='text')" name="data" class="date_input">  
                     <input type="text" placeholder="Última manutenção:" onfocus="(this.type='date')" onblur="(this.type='text')" name="data" class="date_input">  
-                    <input type="text" placeholder="Próxima manutenção:" onfocus="(this.type='date')" onblur="(this.type='text')" name="data" class="date_input">  
-                </div>
-                <div class="bt"> 
-                    ${ButtonComponent.render({label: "Adicionar"})}
                 </div>
             </div>
+        </div>
+        <div class="modal-button"> 
+            ${ButtonComponent.render({label: "Adicionar"})}
         </div>
         `
     }
