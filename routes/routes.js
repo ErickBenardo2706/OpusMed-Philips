@@ -1,5 +1,5 @@
 import { LoginComponent } from "../components/LoginComponent.js";
-import { BensPage, CadastroPage, ComprasPage, DashboardPage, EstoquePage, MovimentoDiaPage, NovaCompraPage } from "../pages/Pages.js";
+import { BensPage, ComprasPage, DashboardPage, EstoquePage, MovimentoDiaPage, NovaCompraPage } from "../pages/Pages.js";
 
 
 export const routes = [
