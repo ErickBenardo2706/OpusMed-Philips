@@ -1,6 +1,9 @@
+import { OpenModal } from '../js/modal.js';
 import { ButtonComponent } from './ButtonComponent.js';
+import { CadastroComponent } from './CadastroComponent.js';
 import { FilterComponent } from './FilterComponent.js';
 import { ListBaseComponent } from './ListBaseComponent.js';
+import { MarcarChegadaComponent } from './MarcarChegadaComponent.js';
 
 export const MovimentoDiaComponente = {
   render: () => {
@@ -8,111 +11,52 @@ export const MovimentoDiaComponente = {
       descricao: "Somos uma equipe apaixonada por JavaScript puro!"
     });
     const list = ListBaseComponent.render({
-      columns: ["Medicamento", 'Horário Entrada', 'Horário Saída'],
+      columns: ['Produto', 'Horário de Saída', 'Horário de Chegada', 'Status'],
       items: [
         {
           id: 1,
-          columns: ["Ibuprofeno", '10:15', '10:40' ],
+          columns: ['Tadala', '10:15', 'x', 'Em andamento'],
           items: [
             {
-              medicamento: "Ibuprofeno",
-              lote: "Nº Lote",
-              colaborador: "Colaborador",
-              chegada: "Chegada",
+              saida: "Quantidade de Saída",
+              chegada: "Quantidade de Chegada",
+              colaborador: "Colaborador"
             },
             {
-              dose: "10mg",
-              lote: "400289",
-              colaborador: "Renato dos Santos",
-              chegada: "Enfermaria",
-            },
-            {
-              dose: "20mg",
-              lote: "400290",
-              colaborador: "Carolina Pereira",
-              chegada: "Recepção",
-            },
-          ]
-        },
-        {
-          id: 2,
-          columns: ["Amoxicilina", "08:30", "08:47"],
-          items: [
-            {
-              medicamento: "Amoxicilina",
-              lote: "Nº Lote",
-              colaborador: "Colaborador",
-              chegada: "Chegada",
-            },
-            {
-              dose: "5mg",
-              lote: "400289",
-              colaborador: "Taylor Swift",
-              chegada: "Cozinha",
-            },
-            {
-              dose: "15mg",
-              lote: "40990",
-              colaborador: "Dave Mustaine",
-              chegada: "UTI",
-            },
-          ]
-        },
-        {
-          id: 3,
-          columns: ["Ritalina", "09:28", "09:45"] ,
-          items: [
-            {
-              nome: "Ritalina",
-              lote: "Nº Lote",
-              quantidade: "Colaborador",
-              chegada: "Chegada",
-            },
-            {
-              dose: "10mg",
-              lote: "498289",
-              colaborador: "Renato Russo",
-              chegada: "Recepção",
-            },
-            {
-              dose: "20mg",
-              lote: "400876",
-              colaborador: "Rita Lee",
-              chegada: "Enfermaria",
-            },
-          ]
-        },
-        {
-          id: 4,
-          columns: ["Cimegripe", "14:15", "14:30"],
-          items: [
-            {
-              nome: "Cimegripe",
-              lote: "Nº Lote",
-              colaborador: "Colaborador",
-              chegada: "Chegada",
-            },
-            {
-              dose: "10mg",
-              lote: "400289",
-              colaborador: "Silvio Santos",
-              chegada: "Enfermaria",
-            },
-            {
-              dose: "20mg",
-              lote: "400290",
-              colaborador: "Marshal Lee",
-              chegada: "UTI",
-            },
+              saida: "10",
+              chegada: "x",
+              colaborador: "Jean Chera",
+              component: {
+                title: "Marcar chegada",
+                subtitle: "Tadala (Jean Chera)",
+                body: MarcarChegadaComponent.render()
+
+              }
+            }
           ]
         },
       ]
     })
 
+    const button = ButtonComponent.render({
+      id: "adicionar-produto",
+      label: "Criar movimento",
+      funcao: OpenModal,
+      props: {
+        title: "Criar movimento",
+        subtitle: "a",
+        component: CadastroComponent.render()
+      }
+    })
+
+
     return `
       <section>
           ${filter}
           ${list}
+          <div class="button-container">
+            ${button}
+          </div>
       </section>
     `;
   }
