@@ -11,7 +11,7 @@ export const CadastroBemComponent = {
                     ${InputComponent.render({type: "text", placeholder: "Valor unitário:"})}
                     ${InputComponent.render({type: "text", placeholder: "Lote:"})}
                     ${InputComponent.render({type: "text", placeholder: "Quantidade:"})}
-                    <input type="text" placeholder="Data Compra:" onfocus="(this.type='date')" onblur="(this.type='text') name="data" class="date_input">  
+                    <input type="text" placeholder="Data Compra:" onfocus="(this.type='date')" onblur="(this.type='text')" name="data" class="date_input">  
                     <input type="text" placeholder="Data Fabricação:" onfocus="(this.type='date')" onblur="(this.type='text')" name="data" class="date_input">  
                 </div>
                 <div class="bt"> 
