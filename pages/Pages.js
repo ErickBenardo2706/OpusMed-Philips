@@ -3,6 +3,7 @@ import { DashboardComponent } from '../components/DashboardComponent.js';
 import { EstoqueComponent } from '../components/EstoqueComponent.js';
 import { ComprasComponent } from '../components/ComprasComponent.js';
 import { BensComponent } from '../components/BensComponent.js';
+import { MovimentoDiaComponente } from '../components/MovimentoDiaComponente.js';
 
 
 export const LoginPage = {
@@ -35,4 +36,8 @@ export const ComprasPage = {
     return LayoutComponent.render(ComprasComponent.render(), "Compras");
   }
 };
-
+export const MovimentoDiaPage = {
+  render: () => {
+    return LayoutComponent.render(MovimentoDiaComponente.render(), "Movimento Dia 19/10/2022");
+  }
+};
