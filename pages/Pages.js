@@ -26,11 +26,6 @@ export const BensPage = {
     return LayoutComponent.render(BensComponent.render(), "Bens");
   }
 };
-export const MovimentosPage = {
-  render: () => {
-    return LayoutComponent.render(DashboardComponent.render(), "Movimentos");
-  }
-};
 export const ComprasPage = {
   render: () => {
     return LayoutComponent.render(ComprasComponent.render(), "Compras");
@@ -38,6 +33,6 @@ export const ComprasPage = {
 };
 export const MovimentoDiaPage = {
   render: () => {
-    return LayoutComponent.render(MovimentoDiaComponente.render(), "Movimento Dia 19/10/2022");
+    return LayoutComponent.render(MovimentoDiaComponente.render(), "Movimentos");
   }
 };

@@ -1,5 +1,4 @@
-import { MovimentoDiaComponente } from "../components/MovimentoDiaComponente.js";
-import { BensPage, ComprasPage, DashboardPage, EstoquePage, MovimentoDiaPage, MovimentosPage } from "../pages/Pages.js";
+import { BensPage, ComprasPage, DashboardPage, EstoquePage, MovimentoDiaPage } from "../pages/Pages.js";
 
 
 export const routes = [
@@ -7,7 +6,6 @@ export const routes = [
   { path: "/dashboard", component: DashboardPage },
   { path: "/estoque", component: EstoquePage },
   { path: "/bens", component: BensPage },
-  { path: "/movimentos", component: MovimentosPage },
+  { path: "/movimentos", component: MovimentoDiaPage },
   { path: "/compras", component: ComprasPage },
-  { path: "/movimento-dia", component: MovimentoDiaPage },
 ];
