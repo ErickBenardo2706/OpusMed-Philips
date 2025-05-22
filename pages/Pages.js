@@ -5,6 +5,8 @@ import { ComprasComponent } from '../components/ComprasComponent.js';
 import { BensComponent } from '../components/BensComponent.js';
 import { CadastroComponent} from '../components/CadastroComponent.js';
 
+import { NovaCompraComponent } from '../components/NovaCompraComponent.js';
+import { MovimentoDiaComponente } from '../components/MovimentoDiaComponente.js';
 
 
 export const LoginPage = {
@@ -27,14 +29,14 @@ export const BensPage = {
     return LayoutComponent.render(BensComponent.render(), "Bens");
   }
 };
-export const MovimentosPage = {
-  render: () => {
-    return LayoutComponent.render(DashboardComponent.render(), "Movimentos");
-  }
-};
 export const ComprasPage = {
   render: () => {
     return LayoutComponent.render(ComprasComponent.render(), "Compras");
+  }
+};
+export const NovaCompraPage = {
+  render: () => {
+    return LayoutComponent.render(NovaCompraComponent.render(), "Nova Compra");
   }
 };
 
@@ -47,3 +49,8 @@ export const CadastroPage = {
 
 
 
+export const MovimentoDiaPage = {
+  render: () => {
+    return LayoutComponent.render(MovimentoDiaComponente.render(), "Movimentos");
+  }
+};

@@ -1,0 +1,46 @@
+table {
+    border-collapse: collapse;
+    border: none;
+}
+
+tr:first-child{
+    background-color: var(--cinza);
+    color: var(--branco);
+    font-size: 14px;
+    margin-right: 5px;
+}
+
+tr:first-child td{
+    margin-right: 20px;
+    padding: 10px;
+}
+
+.tabela_nova_compra{
+    margin-top: 40px;
+}
+
+.tabela_nova_compra td {
+    border-bottom: 1.5px solid var(--cinza);
+}
+
+.tabela_nova_compra table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabela_nova_compra th,
+.tabela_nova_compra td {
+    padding: 8px 12px;
+    text-align: left;
+}
+
+.tabela_nova_compra img {
+    width: 15px;
+}
+
+.btn-trash {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}

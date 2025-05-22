@@ -1,16 +1,20 @@
+import { OpenModal } from "../js/modal.js";
+import { ButtonComponent } from "./ButtonComponent.js";
 
 
 export const DashboardComponent = {
   render: () => {
-
     return `
-      <section>
-        <h1>Página Inicial</h1>
-        <p>Conteúdo da Home.</p>
-
-        <div>
-          <h2>Sobre nós (incluso aqui):</h2>
+      <section class="dashboard">
+        <div class="dash1">
+          <img src="assets/Dashboard1.png">
+          <img src="assets/Dashboard2.png">
         </div>
+
+        <div class="dash2">
+          <img src="assets/Dashboard3.png">
+        </div>
+        
       </section>
     `;
   }

@@ -12,6 +12,8 @@
     --titulo: "Noto Sans", sans-serif;
     --corpo:  "Poppins", sans-serif;
 
+    --input-height: 3rem;
+
 }
 
 *{

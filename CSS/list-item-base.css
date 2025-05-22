@@ -35,7 +35,7 @@ ul.accordation label,
     align-items: center;
     justify-content: space-between;
     padding: 0 10px;
-    height: 2rem;
+    height: var(--input-height);
     font-weight: 500;
     cursor: pointer;
 }
