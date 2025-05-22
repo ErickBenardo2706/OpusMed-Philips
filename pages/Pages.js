@@ -3,6 +3,8 @@ import { DashboardComponent } from '../components/DashboardComponent.js';
 import { EstoqueComponent } from '../components/EstoqueComponent.js';
 import { ComprasComponent } from '../components/ComprasComponent.js';
 import { BensComponent } from '../components/BensComponent.js';
+import { CadastroComponent} from '../components/CadastroComponent.js';
+
 import { NovaCompraComponent } from '../components/NovaCompraComponent.js';
 import { MovimentoDiaComponente } from '../components/MovimentoDiaComponente.js';
 
@@ -37,6 +39,15 @@ export const NovaCompraPage = {
     return LayoutComponent.render(NovaCompraComponent.render(), "Nova Compra");
   }
 };
+
+export const CadastroPage = {
+  render: () => {
+    return LayoutComponent.render(CadastroComponent.render(), "Cadastrar Medicamento");
+  }
+};
+
+
+
 
 export const MovimentoDiaPage = {
   render: () => {

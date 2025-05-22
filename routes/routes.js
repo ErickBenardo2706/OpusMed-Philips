@@ -1,4 +1,4 @@
-import { BensPage, ComprasPage, DashboardPage, EstoquePage, MovimentoDiaPage, NovaCompraPage } from "../pages/Pages.js";
+import { BensPage, CadastroPage, ComprasPage, DashboardPage, EstoquePage, MovimentoDiaPage, NovaCompraPage } from "../pages/Pages.js";
 
 
 export const routes = [
@@ -8,5 +8,6 @@ export const routes = [
   { path: "/bens", component: BensPage },
   { path: "/movimentos", component: MovimentoDiaPage },
   { path: "/compras", component: ComprasPage },
+  { path: "/cadastro-produto", component: CadastroPage},
   { path: "/nova-compra", component: NovaCompraPage },
 ];
