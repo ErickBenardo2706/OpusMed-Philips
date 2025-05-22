@@ -9,7 +9,10 @@ export const LayoutComponent = {
   render: (content, title) => {
     setTimeout(() => {
       const el = document.getElementById("background");
-      if (el) el.addEventListener("click", ()=>{ToggleBackground(), CloseModal()});
+      if (el) el.addEventListener("click", ()=>{
+        CloseModal();
+        ToggleBackground();
+      });
     }, 0);
     return `
       <div>
