@@ -1,24 +1,48 @@
+import { TableComponent } from "./TableComponent.js";
+
 export const FilterComponent = {
-    render: () => {
+    render: (filter) => {
         return `
-       <div class="search-container">
-            <div class="input">
-                <input type="text"> 
-                <button class="input_button">
-                    <img src="/assets/search.svg">
-                </button>
+            <div class="filter-container">
+                <div class="inputs-line">
+                    <div class="search">
+                        <input placeholder="Buscar por:" type="text"> 
+                        <button>
+                            <img src="/assets/search.svg">
+                        </button>
+                        
+                    </div>
+                    <div class="order">
+                        <select id="order">
+                            <option value="epi">Nome (Crescente)</option>
+                            <option value="tarja">Data</option>
+                        </select>
+                    </div>
+                    <label class="filtro-button" for="filter">
+                    </label>
+                </div>
+                <input type="checkbox" id="filter">
+                <div class="filter">
+                    <h1>Filtros:</h1>
+                    <div class="filtros">
+                        ${filter.map((content)=>{
+                        return`
+                            <div class="cols">
+                                <h2>${content.title}<h2>
+                                ${content.itens.map((content)=>{
+                                    return`
+                                        <div class="checkbox">
+                                            <input type="checkbox" id="${content.id}" value="${content.id}">
+                                            <label for="${content.id}"> ${content.nome}</label>
+                                        </div>
+                                    `
+                                }).join('')}
+                            </div>
+                        `
+                        }).join('')}
+                    </div>
+                </div>
             </div>
-            <div class="categoria_suspenso">
-                <label for="categoria">Filtrar por: </label>
-                <select id="categoria" name="filtro">
-                    <option selected></option>
-                    <option value="epi">EPI</option>
-                    <option value="tarja">Tarja Vermelha</option>
-                    <option value="maiorq">Maior quantidade</option>
-                    <option value="menorq">Menor quantidade</option>
-                </select>
-            </div>
-        </div>
     `;
     }
 };

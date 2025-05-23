@@ -6,9 +6,41 @@ import { ListBaseComponent } from './ListBaseComponent.js';
 
 export const EstoqueComponent = {
   render: () => {
-    const filter = FilterComponent.render({
-      descricao: "Somos uma equipe apaixonada por JavaScript puro!"
-    });
+    const filter = FilterComponent.render([{
+      title: "Categoria",
+      itens: [
+        {
+          id: "medicamento",
+          nome: "Medicamento"
+        },
+        {
+          id: "epi",
+          nome: "EPI's"
+        }
+      ]
+    },
+    {
+      title: "Tarja",
+      itens: [
+        {
+          id: "sem-tarja",
+          nome: "Sem Tarja"
+        },
+        {
+          id: "amarela",
+          nome: "Amarela"
+        },
+        {
+          id: "vermelha",
+          nome: "Vermelha"
+        },
+        {
+          id: "preta",
+          nome: "Preta"
+        },
+      ]
+    },
+    ]);
     const list = ListBaseComponent.render({
       columns: ["Nome", "Tipo"],
       items: [
@@ -98,7 +130,7 @@ export const EstoqueComponent = {
       id: "adicionar-produto",
       label: "Adicionar",
       funcao: OpenModal,
-      props:{
+      props: {
         title: "Adicionar",
         subtitle: "a",
         component: CadastroComponent.render()
