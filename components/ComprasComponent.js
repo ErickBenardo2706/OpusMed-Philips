@@ -40,6 +40,16 @@ export const ComprasComponent = {
         },
       ]
     },
+    ],
+    [
+      {
+        value: "nome-desc",
+        nome: "Nome (Decrescente)",
+      },
+      {
+        value: "nome-cres",
+        nome: "Nome (crescente)",
+      },
     ]);
     const list = ListBaseComponent.render({
       columns: ["Mês", "Valor total"],

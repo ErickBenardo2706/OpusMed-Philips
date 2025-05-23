@@ -1,7 +1,7 @@
 import { TableComponent } from "./TableComponent.js";
 
 export const FilterComponent = {
-    render: (filter) => {
+    render: (filter, order) => {
         return `
             <div class="filter-container">
                 <div class="inputs-line">
@@ -10,10 +10,15 @@ export const FilterComponent = {
                         <button>
                             <img src="/assets/search.svg">
                         </button>
-                        
+
                     </div>
                     <div class="order">
                         <select id="order">
+                            ${order.map((content)=>{
+                                return`
+                                    <option value="${content.value}">${content.nome}</option>
+                                `
+                            })}
                             <option value="epi">Nome (Crescente)</option>
                             <option value="tarja">Data</option>
                         </select>
