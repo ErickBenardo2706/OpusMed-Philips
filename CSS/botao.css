@@ -1,8 +1,8 @@
 .button-container {
     display: flex;
-    justify-content: flex-end; /* Alinha à direita */
+    justify-content: flex-end;
     gap: 1rem;
-    margin-top: 2rem; /* ou o espaço vertical que quiser */
+    margin-top: 2rem; 
 }
  
  
