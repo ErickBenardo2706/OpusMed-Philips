@@ -15,10 +15,6 @@
     padding: 10px;
 }
 
-.table-component{
-    margin-top: 40px;
-}
-
 .table-component td {
     border-bottom: 1.5px solid var(--cinza);
 }

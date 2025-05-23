@@ -5,3 +5,11 @@ export const InputComponent = {
     `;
   }
 };
+
+export const checkBoxComponent = {
+  render: (props = {}) => {
+    return `
+        <input type="${props.type || 'checkbox'}" class="checkBoxComponent">
+    `;
+  }
+};

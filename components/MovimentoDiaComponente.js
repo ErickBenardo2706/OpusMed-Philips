@@ -7,15 +7,47 @@ import { MarcarChegadaComponent } from './MarcarChegadaComponent.js';
 
 export const MovimentoDiaComponente = {
   render: () => {
-    const filter = FilterComponent.render({
-      descricao: "Somos uma equipe apaixonada por JavaScript puro!"
-    });
+    const filter = FilterComponent.render([{
+      title: "Categoria",
+      itens: [
+        {
+          id: "medicamento",
+          nome: "Medicamento"
+        },
+        {
+          id: "epi",
+          nome: "EPI's"
+        }
+      ]
+    },
+    {
+      title: "Tarja",
+      itens: [
+        {
+          id: "sem-tarja",
+          nome: "Sem Tarja"
+        },
+        {
+          id: "amarela",
+          nome: "Amarela"
+        },
+        {
+          id: "vermelha",
+          nome: "Vermelha"
+        },
+        {
+          id: "preta",
+          nome: "Preta"
+        },
+      ]
+    },
+    ]);
     const list = ListBaseComponent.render({
       columns: ['Produto', 'Horário de Saída', 'Horário de Chegada', 'Status'],
       items: [
         {
           id: 1,
-          columns: ['Tadala', '10:15', 'x', 'Em andamento'],
+          columns: ['Dipirona', '10:15', 'x', 'Em andamento'],
           items: [
             {
               saida: "Quantidade de Saída",

@@ -1,16 +1,19 @@
 .inputComponent {
     background-color: var(--cinza-claro);
-    padding: 1rem;
+    padding: 0 1rem;
     border-radius: 5px;
     color: var(--ciano);
     border: 1.5px solid var(--cinza);
     font-size: 1rem;
     width: 100%; 
-    max-height: 1rem;
 }
 
 @media (max-width:800px) {
     .inputComponent {
         font-size: 0.8rem;
     }
+}
+.checkBoxComponent {
+    height: 20px;
+    width: 20px;
 }

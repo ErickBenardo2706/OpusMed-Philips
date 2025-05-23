@@ -1,12 +1,39 @@
+:root {
+    --bt-margin: 10px;
+    --input-padding-top: 1%;
+}
+
 .btAdicionar {
-    margin: 10px;
+    margin: var(--bt-margin);
 }
 
 .btConfirmar {
-    margin: 10px;
+    margin: var(--bt-margin);
     position: fixed;
     bottom: 20px;
     right: 40px;
     display: flex;
     justify-content: space-around;
+}
+
+.inputFornecedor {
+    padding-top: var(--input-padding-top);
+}
+
+.inputProduto {
+    padding-top: var(--input-padding-top);
+}
+
+.inputQuantidade {
+    padding-top: var(--input-padding-top);
+    width: 25%;
+}
+
+.checkBox {
+    padding-top: var(--input-padding-top);
+    width: 20%;
+}
+
+.containerCompra {
+    display: flex;
 }
