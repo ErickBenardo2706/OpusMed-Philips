@@ -1,4 +1,4 @@
-export const TableComponent = {
+export const ListaCompraComponent = {
     render: (props ={}) => {
         return `
     
@@ -16,7 +16,10 @@ export const TableComponent = {
                     <tr>
                         ${Object.keys(content).map((key) => {
                             if (key != "id")
-                                return `<td>${content[key]}</td>`;
+                                return `<td>
+                                            <input type="text" value=""
+                                            ${content[key]}
+                                        </td>`;
                         }).join('')}
                     </tr>
                 `;
