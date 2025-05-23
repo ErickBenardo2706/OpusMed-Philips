@@ -10,7 +10,6 @@ export const FilterComponent = {
                         <button>
                             <img src="/assets/search.svg">
                         </button>
-
                     </div>
                     <div class="order">
                         <select id="order">
@@ -19,12 +18,9 @@ export const FilterComponent = {
                                     <option value="${content.value}">${content.nome}</option>
                                 `
                             })}
-                            <option value="epi">Nome (Crescente)</option>
-                            <option value="tarja">Data</option>
                         </select>
                     </div>
-                    <label class="filtro-button" for="filter">
-                    </label>
+                    <label class="filtro-button" for="filter"></label>
                 </div>
                 <input type="checkbox" id="filter">
                 <div class="filter">

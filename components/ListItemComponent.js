@@ -3,6 +3,12 @@ import { OpenModal } from "../js/modal.js";
 
 export const ListItemComponent = {
     render: (props = {}) => {
+        function alterarClick(id){
+            const el = document.getElementById(id);
+            if (el) {
+                el.classList.remove("clicavel");
+            }
+        }
         return `
             <li>
                 <input type="radio" name="accordation" id="listitem-${props.id}">
@@ -33,7 +39,7 @@ export const ListItemComponent = {
                                     ${Object.keys(content).map((key) => {
                                         if (key != "component")
                                             return `<td>${content[key]}</td>`;
-                                    }).join("")}
+                                        }).join("")} 
                                 </tr>
                             `;
                         }).join("")}

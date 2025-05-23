@@ -84,7 +84,7 @@ ul.accordation table tr {
 
 ul.accordation table tr+tr:hover {
     background-color: #D9D9D9;
-    cursor: pointer;
+    cursor:pointer;
 }
 
 ul.accordation table tr:first-child {

@@ -43,12 +43,16 @@ export const EstoqueComponent = {
     ],
     [
       {
-        value: "nome-desc",
-        nome: "Nome (Decrescente)",
+        value: "quant-maior",
+        nome: "Maior Quantidade",
       },
       {
-        value: "nome-cres",
-        nome: "Nome (crescente)",
+        value: "nome-menor",
+        nome: "Menor Quantidade",
+      },
+      {
+        value: "a-z",
+        nome: "Nome (A-Z)",
       },
     ]);
     const list = ListBaseComponent.render({
