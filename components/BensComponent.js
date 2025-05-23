@@ -1,3 +1,6 @@
+import { OpenModal } from '../js/modal.js';
+import { ButtonComponent } from './ButtonComponent.js';
+import { CadastroComponent } from './CadastroComponent.js';
 import { FilterComponent } from './FilterComponent.js';
 import { ListBaseComponent } from './ListBaseComponent.js';
 
@@ -143,12 +146,23 @@ export const BensComponent = {
         },
       ]
     })
+    const button = ButtonComponent.render({
+          id: "adicionar-produto",
+          label: "Adicionar",
+          funcao: OpenModal,
+          props:{
+            title: "Adicionar",
+            subtitle: "a",
+            component: CadastroComponent.render()
+          }
+    })
 
     return `
       <section>
           ${filter}
           ${list}
           <div class="button-container">
+            ${button}
           </div>
       </section>
     `;

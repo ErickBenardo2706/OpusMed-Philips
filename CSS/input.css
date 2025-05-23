@@ -5,8 +5,13 @@
     color: var(--ciano);
     border: 1.5px solid var(--cinza);
     font-size: 1rem;
-    width: 100%; 
-    height: var(--input-height);
+    height: 2.1rem;
+}
+
+@media (max-width:800px) {
+    .inputComponent {
+        font-size: 0.8rem;
+    }
 }
 
 .checkBoxComponent {

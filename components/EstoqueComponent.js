@@ -140,9 +140,9 @@ export const EstoqueComponent = {
       id: "adicionar-produto",
       label: "Adicionar",
       funcao: OpenModal,
-      props: {
-        title: "Adicionar",
-        subtitle: "a",
+      props:{
+        title: "Adicionar Produto",
+        subtitle: "",
         component: CadastroComponent.render()
       }
     })

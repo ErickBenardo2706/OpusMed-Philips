@@ -5,13 +5,13 @@ export const MarcarChegadaComponent = {
         return `
         <div class="screen">
             <div class="linha-baixo">   
-                ${InputComponent.render({ type: "text", placeholder: "Quantidade de chegada" })}
-                ${InputComponent.render({ type: "text", placeholder: "Horário de chegada" })} 
-                </div>
-                <div class="modal-button"> 
-                    ${ButtonComponent.render({ id: "adasd", label: "Confirmar chegada" })}
+                ${InputComponent.render({type: "text", placeholder: "Quantidade de chegada" })}
+                ${InputComponent.render({type: "text", placeholder: "Horário de chegada" })} 
                 </div>
             </div>
+        </div>
+        <div class="modal-button"> 
+            ${ButtonComponent.render({ id: "adasd", label: "Confirmar chegada" })}
         </div>
         `
     }
