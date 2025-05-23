@@ -15,7 +15,7 @@ export const MovimentoDiaComponente = {
           columns: ["Ibuprofeno", '10:15', '10:40' ],
           items: [
             {
-              medicamento: "Ibuprofeno",
+              dose:"Dose",
               lote: "Nº Lote",
               colaborador: "Colaborador",
               chegada: "Chegada",
@@ -39,7 +39,7 @@ export const MovimentoDiaComponente = {
           columns: ["Amoxicilina", "08:30", "08:47"],
           items: [
             {
-              medicamento: "Amoxicilina",
+              dose:"Dose",
               lote: "Nº Lote",
               colaborador: "Colaborador",
               chegada: "Chegada",
@@ -63,7 +63,7 @@ export const MovimentoDiaComponente = {
           columns: ["Ritalina", "09:28", "09:45"] ,
           items: [
             {
-              nome: "Ritalina",
+              dose:"Dose",
               lote: "Nº Lote",
               quantidade: "Colaborador",
               chegada: "Chegada",
@@ -87,7 +87,7 @@ export const MovimentoDiaComponente = {
           columns: ["Cimegripe", "14:15", "14:30"],
           items: [
             {
-              nome: "Cimegripe",
+              dose:"Dose",
               lote: "Nº Lote",
               colaborador: "Colaborador",
               chegada: "Chegada",
