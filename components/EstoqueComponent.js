@@ -99,8 +99,8 @@ export const EstoqueComponent = {
       label: "Adicionar",
       funcao: OpenModal,
       props:{
-        title: "Adicionar",
-        subtitle: "a",
+        title: "Adicionar Produto",
+        subtitle: "",
         component: CadastroComponent.render()
       }
     })
