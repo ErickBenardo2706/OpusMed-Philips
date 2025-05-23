@@ -37,6 +37,16 @@ export const BensComponent = {
         },
       ]
     },
+    ],
+    [
+      {
+        value: "nome-desc",
+        nome: "Nome (Decrescente)",
+      },
+      {
+        value: "nome-cres",
+        nome: "Nome (crescente)",
+      },
     ]);
     const list = ListBaseComponent.render({
       columns: ["Nome", "Quantidade Total"],

@@ -41,6 +41,16 @@ export const MovimentoDiaComponente = {
         },
       ]
     },
+    ],
+    [
+      {
+        value: "nome-desc",
+        nome: "Nome (Decrescente)",
+      },
+      {
+        value: "nome-cres",
+        nome: "Nome (crescente)",
+      },
     ]);
     const list = ListBaseComponent.render({
       columns: ['Produto', 'Horário de Saída', 'Horário de Chegada', 'Status'],
