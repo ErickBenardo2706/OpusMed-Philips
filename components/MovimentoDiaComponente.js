@@ -53,11 +53,11 @@ export const MovimentoDiaComponente = {
       },
     ]);
     const list = ListBaseComponent.render({
-      columns: ['Produto', 'Horário de Saída', 'Horário de Chegada', 'Status'],
+      columns: ['Produto', 'Horário de Saída', 'Horário de Chegada', 'Status', ' '],
       items: [
         {
           id: 1,
-          columns: ['Dipirona', '10:15', 'x', 'Em andamento'],
+          columns: ['Dipirona', '10:15', 'x', 'Em andamento','<div class="status"></div>' ],
           items: [
             {
               saida: "Quantidade de Saída",
@@ -70,13 +70,35 @@ export const MovimentoDiaComponente = {
               colaborador: "Jean Chera",
               component: {
                 title: "Marcar chegada",
-                subtitle: "Tadala (Jean Chera)",
+                subtitle: "Dipirona (Jean Chera)",
                 body: MarcarChegadaComponent.render()
 
               }
             }
           ]
         },
+        {
+          id: 2,
+          columns: ['Bezetacil', '11:00', '11:15', 'Finalizado', '<div class="statusFim"></div>'],
+          items: [
+            {
+              saida: "Quantidade de Saída",
+              chegada: "Quantidade de Chegada",
+              colaborador: "Colaborador"
+            },
+            {
+              saida: "2",
+              chegada: "2",
+              colaborador: "Luana Garcia",
+              component: {
+                title: "Marcar chegada",
+                subtitle: "Bezetacil (Luana Garcia)",
+                body: MarcarChegadaComponent.render()
+
+              }
+            }
+          ]
+        }
       ]
     })
 
