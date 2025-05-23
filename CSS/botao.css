@@ -1,9 +1,8 @@
 .button-container {
-    position: fixed;
-    bottom: 6vh;
-    right: 2rem;
     display: flex;
+    justify-content: flex-end; 
     gap: 1rem;
+    margin-top: 1rem; 
 }
 
 .botao {
@@ -12,8 +11,10 @@
     border: solid 2px var(--ciano);
     border-radius: 10px;
     font-family: var(--corpo);
-
-    background: var(--cinza);
+    background: var(--cinza);    display: flex;
+    justify-content: flex-end; 
+    gap: 1rem;
+    margin-top: 2rem; 
     color: var(--branco);
     transition: 0.2s;
 }
