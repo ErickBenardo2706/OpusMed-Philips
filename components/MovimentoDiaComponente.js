@@ -15,7 +15,7 @@ export const MovimentoDiaComponente = {
       items: [
         {
           id: 1,
-          columns: ['Tadala', '10:15', 'x', 'Em andamento'],
+          columns: ['Dipirona', '10:15', 'x', 'Em andamento'],
           items: [
             {
               saida: "Quantidade de Saída",
