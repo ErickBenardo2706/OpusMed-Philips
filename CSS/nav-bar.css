@@ -67,3 +67,17 @@ nav li {
 nav li+li {
     margin-top: 1rem;
 }
+
+.name_user.close {
+    display: none;
+}
+
+.name_user img{
+    margin-left: 30%;
+    width: 30%;
+}
+
+.name_user{
+    font-size: 15px;
+    font-weight: bold;
+}
