@@ -8,6 +8,14 @@ export const CadastroComponent = {
                 <div class="linha-baixo">
                 ${InputComponent.render({type: "text", placeholder: "Código de barra:"})}
                 ${InputComponent.render({type: "text", placeholder: "Nome:"})}
+                <div class="inputComponent">
+                        <select id="inputSelect" required>
+                            <option value="" disabled selected hidden>Tipo de produto:</option>
+                            <option value="medicamento">Medicamento</option>
+                            <option value="epi">EPI</option>
+                            <option value="bem">Patrimônio</option>
+                        </select>
+                    </div>
                 </div>
                 <div class="linha-baixo">
                     ${InputComponent.render({type: "text", placeholder: "Mg:"})}

@@ -6,12 +6,27 @@
     border: 1.5px solid var(--cinza);
     font-size: 1rem;
     height: 2.1rem;
+    align-items: center;
 }
 
 @media (max-width:800px) {
     .inputComponent {
         font-size: 0.8rem;
     }
+}
+
+.inputComponent select{
+    background-color: transparent;
+    border: none;
+    color: var(--cinza);
+    font-size: inherit;
+    height: 100%;
+    width: 100%;
+    outline: none;
+    text-align: left;
+    text-align-last: left;
+    appearance: none;
+    padding: 0 0.2rem;
 }
 
 .checkBoxComponent {

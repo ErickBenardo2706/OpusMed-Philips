@@ -52,6 +52,7 @@ export const BensComponent = {
       },
     ]);
     const list = ListBaseComponent.render({
+      screen: "patrimonio",
       columns: ["Nome", "Quantidade Total"],
       items: [
         {
