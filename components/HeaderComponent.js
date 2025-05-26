@@ -3,7 +3,10 @@ import { ToggleMenu } from "../js/menu.js";
 export const HeaderComponent = {
     render: () => {
         setTimeout(() => {
+            const name = document.getElementById("name").value
+            
             const el = document.getElementById("menu-button");
+
             if (el) el.addEventListener("click", ToggleMenu);
         }, 0);
         return `
@@ -11,8 +14,18 @@ export const HeaderComponent = {
             <nav class="close">
                 <button id="menu-button" class="button">
                     <i class="fi fi-rs-burger-menu"></i>
+
+                    
                     <span>Menu</span>
                 </button>
+                     <div class="name_user close">
+                        <img src="./assets/user.png"> <br>
+                        <label>Seja Bem-Vindo</label>
+                    <label id="name" >Erick</label>
+                
+                </div>
+               
+
                 <div>
                     <ul>
                         <li>
