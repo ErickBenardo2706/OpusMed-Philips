@@ -3,12 +3,6 @@ import { OpenModal } from "../js/modal.js";
 
 export const ListItemComponent = {
     render: (props = {}) => {
-        function alterarClick(id){
-            const el = document.getElementById(id);
-            if (el) {
-                el.classList.remove("clicavel");
-            }
-        }
         return `
             <li>
                 <input type="radio" name="accordation" id="listitem-${props.id}">
@@ -21,10 +15,15 @@ export const ListItemComponent = {
                 </label>
                 <div class="content">
                     <table>
-                        ${props.items.map((content,index) => {
-                            if(index!=0 && content.component){
+                        ${props.items.map((content, index) => {
+                            const rowId = `${props.id}-row-${index}`;
+                            const screensComClicavel = ["compra", "movimento"];
+
+                            const rowClass = screensComClicavel.includes(props.screen) ? "clicavel" : "";
+
+                            if (index !== 0 && content.component) {
                                 setTimeout(() => {
-                                    const el = document.getElementById(`${props.id}-row-${index}`);
+                                    const el = document.getElementById(rowId);
                                     if (el) el.addEventListener("click", () => {
                                         OpenModal({
                                             title: content.component.title,
@@ -34,12 +33,15 @@ export const ListItemComponent = {
                                     });
                                 }, 0);
                             }
+
                             return `
-                                <tr id="${props.id}-row-${index}">
+                                <tr id="${rowId}" class="${rowClass}">
                                     ${Object.keys(content).map((key) => {
-                                        if (key != "component")
+                                        if (key !== "component") {
                                             return `<td>${content[key]}</td>`;
-                                        }).join("")} 
+                                        }
+                                        return "";
+                                    }).join("")}
                                 </tr>
                             `;
                         }).join("")}
@@ -49,3 +51,4 @@ export const ListItemComponent = {
         `;
     },
 };
+

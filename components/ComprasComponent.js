@@ -52,6 +52,7 @@ export const ComprasComponent = {
       },
     ]);
     const list = ListBaseComponent.render({
+      screen: "compra",
       columns: ["Mês", "Valor total"],
       items: [
         {

@@ -17,6 +17,7 @@ export const ListBaseComponent = {
                             id: content.id,
                             columns: content.columns,
                             items: content.items,
+                            screen: props.screen,
                         });
                     }).join('')}
             </ul>

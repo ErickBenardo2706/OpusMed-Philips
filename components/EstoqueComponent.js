@@ -56,6 +56,7 @@ export const EstoqueComponent = {
       },
     ]);
     const list = ListBaseComponent.render({
+      screen: "estoque",
       columns: ["Nome", "Tipo"],
       items: [
         {
