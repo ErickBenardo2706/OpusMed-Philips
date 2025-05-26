@@ -15,10 +15,15 @@ export const ListItemComponent = {
                 </label>
                 <div class="content">
                     <table>
-                        ${props.items.map((content,index) => {
-                            if(index!=0 && content.component){
+                        ${props.items.map((content, index) => {
+                            const rowId = `${props.id}-row-${index}`;
+                            const screensComClicavel = ["compra", "movimento"];
+
+                            const rowClass = screensComClicavel.includes(props.screen) ? "clicavel" : "";
+
+                            if (index !== 0 && content.component) {
                                 setTimeout(() => {
-                                    const el = document.getElementById(`${props.id}-row-${index}`);
+                                    const el = document.getElementById(rowId);
                                     if (el) el.addEventListener("click", () => {
                                         OpenModal({
                                             title: content.component.title,
@@ -28,11 +33,14 @@ export const ListItemComponent = {
                                     });
                                 }, 0);
                             }
+
                             return `
-                                <tr id="${props.id}-row-${index}">
+                                <tr id="${rowId}" class="${rowClass}">
                                     ${Object.keys(content).map((key) => {
-                                        if (key != "component")
+                                        if (key !== "component") {
                                             return `<td>${content[key]}</td>`;
+                                        }
+                                        return "";
                                     }).join("")}
                                 </tr>
                             `;
@@ -43,3 +51,4 @@ export const ListItemComponent = {
         `;
     },
 };
+

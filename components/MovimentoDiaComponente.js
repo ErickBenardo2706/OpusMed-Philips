@@ -53,6 +53,7 @@ export const MovimentoDiaComponente = {
       },
     ]);
     const list = ListBaseComponent.render({
+      screen: "movimento",
       columns: ['Produto', 'Horário de Saída', 'Horário de Chegada', 'Status', ' '],
       items: [
         {
