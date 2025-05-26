@@ -73,11 +73,11 @@ nav li+li {
 }
 
 .name_user img{
-    margin-left: 30%;
-    width: 30%;
+    width: 20%;
 }
 
 .name_user{
-    font-size: 15px;
+    text-align: center;
+    font-size: 0.9rem;
     font-weight: bold;
 }

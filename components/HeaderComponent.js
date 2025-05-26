@@ -60,10 +60,10 @@ export const HeaderComponent = {
                         </li>
                     </ul>
                 </div>
-                <button class="button">
+                <a class="button" href="#/">
                     <i class="fi fi-rs-sign-out-alt"></i>
                     <span>Logout</span>
-                </button>
+                </a>
             </nav>
         </header>
     `;
