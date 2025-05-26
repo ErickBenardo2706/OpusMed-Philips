@@ -1,96 +1,128 @@
+import { routes } from "../routes/routes.js";
 import { ButtonComponent } from "./ButtonComponent.js";
 import { ButtonDeleteComponent } from "./ButtonDeleteComponente.js";
 import { checkBoxComponent, InputComponent } from "./InputComponent.js";
-import { ListaCompraComponent } from "./ListaCompraComponent.js";
+
+export let detalhes = [{ id: 0, produto: "", quantidade: 0 }];
+function onAddProduct() {
+ const novoDetalhe = [
+   ...detalhes,
+   { id: detalhes.length, produto: "", quantidade: 0 },
+ ];
+ detalhes = novoDetalhe;
+ const route = routes.find(r => r.path === '/nova-compra');
+ if (route && route.component) {
+     document.getElementById("app").innerHTML = route.component.render();
+ }
+}
+
+function onRemoveProduct(id) {
+ let index = 0;
+ const detalheAtualizado = [];
+ for (const detalhe of detalhes) {
+   if (detalhe.id != id) {
+     detalheAtualizado.push({
+       id: index,
+       produto: detalhe.produto,
+       quantidade: detalhe.quantidade,
+     });
+     index++;
+   }
+ }
+
+ detalhes = detalheAtualizado;
+ const route = routes.find(r => r.path === '/nova-compra');
+ if (route && route.component) {
+     document.getElementById("app").innerHTML = route.component.render();
+ }
+}
+
+function handleChangeProduto(event, id){
+ const index = detalhes.findIndex((item) => item.id === id);
+ const detalheAtualizado = [...detalhes];
+ detalheAtualizado[index].produto = event.target.value;
+ detalhes = detalheAtualizado;
+}
+
+function handleChangeQuantidade(event, id){
+ const index = detalhes.findIndex((item) => item.id === id);
+ const detalheAtualizado = [...detalhes];
+ detalheAtualizado[index].quantidade = event.target.value;
+ detalhes = detalheAtualizado;
+}
 
 export const NovaCompraComponent = {
-    render: () => {
-        let detalhes = [{ id: 0, produto: "", quantidade: 0 }]
+ render: (props) => {
 
-        function onAddProduct() {
-            const novoDetalhe = [
-                ...detalhes,
-                { id: detalhes.length, produto: "", quantidade: 0 }
-            ]
-
-            detalhes = novoDetalhe;
-            console.log(detalhes)
-        }
-
-        function onRemoveProduct(id) {
-            let index = 0;
-            const detalheAtualizado = [];
-            for (const detalhe of detalhes) {
-                if (detalhe.id != id) {
-                    detalheAtualizado.push({ id: index, produto: detalhe.detalhes })
-                    index ++
-                } 
-            }
-
-            detalhes = detalheAtualizado;
-            console.log(detalhes)
-        }
-
-        const list = {colunas: ["Produto", "Quantidade"],items: detalhes}
-        return `
-            <div class="table-component">
-                <table>
-                    <tr>
-                        ${list.colunas.map((content) => {
-                            return `
-                                <th>${content}</th>
-                            `;
-                        }).join('')}
-                    </tr>
-                    ${list.items.map((content) => {
-                        return `
-                            <tr>
-                                ${Object.keys(content).map((key) => {
-                                    if (key == "produto")
-                                        return `<td>
-                                                    <input type="text" value="${content.produto}"
-                                                </td>
-                                        `
-
-                                }).join('')}
-                                ${ButtonDeleteComponent.render({ id:"delete-button", label: "remover", funcao: onRemoveProduct})}
-                            </tr>
-                        `;
-                    }).join('')}
-                </table>
+   return `
+           <section class="nova-compra">
+  
+            <div class="inputFornecedor">
+               ${InputComponent.render({ type: "text", placeholder: "Fornecedor:" })}
             </div>
-            ${ButtonComponent.render({ id:"add-button", label: "Adicionar", funcao: onAddProduct})}
-        `;
-    }
+
+          <div class="table-component">
+            <table>
+                    ${props.map((content) => {
+                    return `
+                    <tr id="object-${content.id}">
+                        ${Object.keys(content).map((key) => {
+                           setTimeout(() => {
+                               const row = document.getElementById(`object-${content.id}`)
+                               const el = row.querySelector('input[type="text"]');
+                               const nm = row.querySelector('input[type="number"]');
+
+                               if (el && nm) {
+                                   el.onchange = (e)=>{handleChangeProduto(e, content.id)}
+                                   nm.onchange = (e)=>{handleChangeQuantidade(e, content.id)}
+                                   }
+                                   }, 0);
+                               
+                               if (key == "produto")
+                            return `<td>
+                                         <input type="text" class="inputProduto inputComponent" placeholder="Produto" value="${content.produto}">
+                                    </td>
+                                       `;
+                                       else if (key == "quantidade")
+                                         return `<td>
+                                            <input type="number" class="inputQuantidade inputComponent" value="${content.quantidade}">
+                                            </td>
+                                            `;
+                                 })
+                                 .join("")}
+                                    <td>
+                                        ${ButtonDeleteComponent.render({
+                                          id: `delete-button-${content.id}`,
+                                          label: "remover",
+                                          funcao: onRemoveProduct,
+                                          props: content.id,
+                                        })}
+                                    </td>
+                    </tr>
+                       `;
+                     })
+                     .join("")}
+                        </table>
+         </div>
+
+           <div class="containerCompra">
+               <div class="checkBox">
+                   ${checkBoxComponent.render({ type: "checkbox" })}
+                   <span>Buscar em relatório</span>
+               </div>
+
+               ${ButtonComponent.render({
+                id: `add-button-${props.id}`,
+                label: "Adicionar",
+                funcao: onAddProduct,
+              })}
+           </div>
+    
+           <div class="btConfirmar">
+               ${ButtonComponent.render({ label: "Confirmar Compra" })}
+           </div>
+         </section>
+       `;
+ },
 };
-        // <section>
-  
-        //   <div class="inputFornecedor">
-        //       ${InputComponent.render({ type: "text", placeholder: "Fornecedor:" })}
-        //   </div>
-  
-        //   <div class="inputProduto">
-        //       ${InputComponent.render({ type: "text", placeholder: "Produto:" })}
-        //   </div>
-  
-        //   <div class="containerCompra">
-        //       <div class="inputQuantidade">
-        //           ${InputComponent.render({ type: "number", placeholder: "Quantidade:" })}
-        //       </div>
-        //       <div class="checkBox">
-        //           ${checkBoxComponent.render({ type: "checkbox" })}
-        //       </div>
-        //   </div>
-  
-        //   <div class="btAdicionar">
-            //   ${ButtonComponent.render({ label: "Adicionar" })}
-        //   </div>
-  
-        //   <div class="corpo">
-        //       ${list}
-        //   </div>
-          
-        //   <div class="btConfirmar">
-        //       ${ButtonComponent.render({ label: "Confirmar Compra" })}
-        //   </div>
-        // </section>
+        

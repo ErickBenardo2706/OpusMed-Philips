@@ -5,7 +5,7 @@ import { ComprasComponent } from '../components/ComprasComponent.js';
 import { BensComponent } from '../components/BensComponent.js';
 import { CadastroComponent} from '../components/CadastroComponent.js';
 
-import { NovaCompraComponent } from '../components/NovaCompraComponent.js';
+import { detalhes, NovaCompraComponent } from '../components/NovaCompraComponent.js';
 import { MovimentoDiaComponente } from '../components/MovimentoDiaComponente.js';
 
 
@@ -31,7 +31,7 @@ export const ComprasPage = {
 };
 export const NovaCompraPage = {
   render: () => {
-    return LayoutComponent.render(NovaCompraComponent.render(), "Nova Compra");
+    return LayoutComponent.render(NovaCompraComponent.render(detalhes), "Nova Compra");
   }
 };
 
