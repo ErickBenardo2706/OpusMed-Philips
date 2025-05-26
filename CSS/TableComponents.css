@@ -3,7 +3,7 @@
     border: none;
 }
 
-.table-component tr:first-child{
+.table-component tr:first-child.header{
     background-color: var(--cinza);
     color: var(--branco);
     font-size: 14px;
@@ -15,7 +15,7 @@
     padding: 10px;
 }
 
-.table-component td {
+.table-component td.line {
     border-bottom: 1.5px solid var(--cinza);
 }
 

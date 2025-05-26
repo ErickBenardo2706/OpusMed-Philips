@@ -20,6 +20,10 @@
     padding-top: var(--input-padding-top);
 }
 
+.inputFornecedor input{
+    width: 100%;
+}
+
 .inputProduto {
     padding-top: var(--input-padding-top);
 }
@@ -34,6 +38,15 @@
     width: 20%;
 }
 
+.table-component input{
+    width: 90%;
+}
+
+.nova-compra .table-component td{
+    padding: 1rem 0 !important;
+}
+
 .containerCompra {
     display: flex;
+    justify-content: space-between;
 }
