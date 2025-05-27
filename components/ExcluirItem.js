@@ -1,16 +1,15 @@
+import { ConfirmDelete } from '../JS/button.js';
 import { ButtonComponent } from './ButtonComponent.js';
-import { InputComponent } from './InputComponent.js';
+
 export const ExcluirItem = {
     render: () => {
         return `
-        <div class="screen">
-            <div class="linha-baixo">   
-                <label>Motivo da Exclusão</label>
-                ${InputComponent.render({type: "text" })}
-            </div>
+        <div class="screen excluirItem"> 
+            <label>Motivo da Exclusão:</label>
+            <textarea rows="6"></textarea>
         </div>
         <div class="modal-button"> 
-            ${ButtonComponent.render({ id: "999", label: "Confirmar Exclusão" })}
+            ${ButtonComponent.render({ id: "confirmar-exclusao", label: "Confirmar Exclusão", funcao: ConfirmDelete })}
         </div>
         `
     }

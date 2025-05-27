@@ -1,8 +1,7 @@
 import { OnDelete } from '../JS/button.js';
-import { OpenModal } from '../JS/modal.js';
+import { OpenModal } from '../js/modal.js';
 import { ButtonComponent } from './ButtonComponent.js';
 import { ButtonDeleteComponent } from './ButtonDeleteComponente.js';
-import { CadastroComponent } from './CadastroComponent.js';
 import { FilterComponent } from './FilterComponent.js';
 import { ListBaseComponent } from './ListBaseComponent.js';
 
