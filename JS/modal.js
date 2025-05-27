@@ -1,12 +1,12 @@
 import { ModalBaseComponent } from "../components/ModalBaseComponent.js";
-import { ToggleBackground } from "./menu.js";
+import { ToggleBackground } from "../JS/menu.js";
 
 export function SetModal(props){
     console.log(document.getElementById(props.id))
-    // document.getElementById(props.id).innerHTML = ModalBaseComponent.render({
-    //     subtitle: props.subtitle,
-    //     component: props.body
-    // })
+    document.getElementById(props.id).innerHTML = ModalBaseComponent.render({
+        subtitle: props.subtitle,
+        component: props.body
+    })
 }
 
 export function OpenModal(id) {

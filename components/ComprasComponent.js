@@ -1,4 +1,4 @@
-import { ChangePage } from "../js/button.js";
+import { ChangePage } from "../JS/button.js";
 import { ButtonComponent } from "./ButtonComponent.js";
 import { FilterComponent } from "./FilterComponent.js";
 import { ListBaseComponent } from "./ListBaseComponent.js";

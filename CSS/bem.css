@@ -11,3 +11,13 @@
     display: flex;
     justify-content: center;
 }
+
+.excluirItem {
+    display: flex;
+    flex-direction: column;
+    height: 30vh;
+}
+
+textarea {
+    resize: none;
+}

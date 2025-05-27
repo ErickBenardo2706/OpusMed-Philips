@@ -1,6 +1,7 @@
 import { ToggleBackground } from "../js/menu.js";
-import { CloseModal } from "../js/modal.js";
+import { CloseModal } from "../JS/modal.js";
 import { CadastroComponent } from "./CadastroComponent.js";
+import { ExcluirItem } from "./ExcluirItem.js";
 import { HeaderComponent } from "./HeaderComponent.js";
 import { MenuComponent } from "./MenuComponent.js";
 import { ModalBaseComponent } from "./ModalBaseComponent.js";
@@ -28,6 +29,12 @@ export const LayoutComponent = {
               id: "modal-adicionar-produto",
               title: "Adicionar produto",
               component: CadastroComponent.render()
+            })}
+            ${ModalBaseComponent.render({
+              id: "modal-excluir-item",
+              title: "Atenção",
+              subtitle: "Excluir item",
+              component: ExcluirItem.render()
             })}
         </div>
         ${HeaderComponent.render()}
