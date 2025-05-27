@@ -5,7 +5,7 @@ export const ButtonDeleteComponent = {
       if (el) el.addEventListener("click", () => { props.funcao(props.props)});
     }, 0);
     return `
-      <button class="btn-trash" id="${props.id}">
+      <button class="btn-trash btn-delet" id="${props.id}">
         <img src="assets/trash.svg" alt="Excluir">
       </button>
     `;

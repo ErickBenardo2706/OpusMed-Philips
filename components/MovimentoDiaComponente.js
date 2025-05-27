@@ -1,4 +1,4 @@
-import { OpenModal } from '../js/modal.js';
+import { OpenModal } from '../JS/modal.js';
 import { ButtonComponent } from './ButtonComponent.js';
 import { CadastroComponent } from './CadastroComponent.js';
 import { FilterComponent } from './FilterComponent.js';
@@ -43,8 +43,8 @@ export const MovimentoDiaComponente = {
     ],
     [
       {
-        value: "nome-desc",
-        nome: "Nome (Decrescente)",
+        value: "medicamento-cresc",
+        nome: "Nome Medicamento",
       },
       {
         value: "nome-cres",
