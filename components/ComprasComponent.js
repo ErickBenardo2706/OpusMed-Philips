@@ -69,8 +69,10 @@ export const ComprasComponent = {
               total: "$ 3100,00",
               component: {
                 id: "nota-fiscal",
+                title: "Nota Fiscal",
                 subtitle: "02/06/2025",
-                body: NotaFiscalComponent.render({
+                body: NotaFiscalComponent.render(
+                {
                   fornecedor: {
                     representante: "Jean Chera",
                     nome: "Forncedor A",

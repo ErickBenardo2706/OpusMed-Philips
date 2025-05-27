@@ -69,10 +69,7 @@ export const MovimentoDiaComponente = {
               chegada: "x",
               colaborador: "Jean Chera",
               component: {
-                title: "Marcar chegada",
-                subtitle: "Dipirona (Jean Chera)",
-                body: MarcarChegadaComponent.render()
-
+                id: "marcar-chegada",
               }
             }
           ]
@@ -91,6 +88,7 @@ export const MovimentoDiaComponente = {
               chegada: "2",
               colaborador: "Luana Garcia",
               component: {
+                id: "marcar-chegada",
                 title: "Marcar chegada",
                 subtitle: "Bezetacil (Luana Garcia)",
                 body: MarcarChegadaComponent.render()

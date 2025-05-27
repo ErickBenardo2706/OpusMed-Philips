@@ -1,4 +1,4 @@
-import { ToggleBackground } from "../js/menu.js";
+import { ToggleBackground } from "../JS/menu.js";
 import { CloseModal } from "../js/modal.js";
 
 export const ModalBaseComponent = {
@@ -11,7 +11,6 @@ export const ModalBaseComponent = {
             });
         }, 0);
         return `
-        <div id="${props.id}" class="modal close">
             <header>
                 <div>
                     <span><b>${props.title}${props.subtitle ? " - </b>"+ props.subtitle : "</b>"}</span>
@@ -21,7 +20,6 @@ export const ModalBaseComponent = {
                 </button>
             </header>
             ${props.component}
-        </div>
     `;
     }
 };

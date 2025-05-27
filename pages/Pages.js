@@ -7,6 +7,7 @@ import { CadastroComponent} from '../components/CadastroComponent.js';
 
 import { detalhes, NovaCompraComponent } from '../components/NovaCompraComponent.js';
 import { MovimentoDiaComponente } from '../components/MovimentoDiaComponente.js';
+import { MarcarChegadaComponent } from '../components/MarcarChegadaComponent.js';
 
 
 export const DashboardPage = {

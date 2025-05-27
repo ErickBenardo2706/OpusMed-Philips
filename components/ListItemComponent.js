@@ -1,6 +1,5 @@
-import { ToggleBackground } from "../js/menu.js";
-import { OpenModal, SetModal } from "../js/modal.js";
-import { routes } from "../routes/routes.js";
+import { OpenModal, SetModal } from "../JS/modal.js";
+import { NotaFiscalComponent } from "./NotaFiscalComponent.js";
 
 export const ListItemComponent = {
     render: (props = {}) => {
@@ -23,11 +22,14 @@ export const ListItemComponent = {
                                 setTimeout(() => {
                                     const el = document.getElementById(rowId);
                                     if (el) el.addEventListener("click", () => {
-                                        SetModal({
-                                            id: `${content.component.id}-body`, 
-                                            subtitle: content.component.subtitle,
-                                            component: content.component.body
-                                        });
+                                        if(content.component.body){
+                                            SetModal({
+                                                id: content.component.id,
+                                                title: content.component.title,
+                                                subtitle: content.component.subtitle, 
+                                                component: content.component.body,
+                                            });
+                                        }
                                         OpenModal(`modal-${content.component.id}`);
                                     });
                                 }, 0);
