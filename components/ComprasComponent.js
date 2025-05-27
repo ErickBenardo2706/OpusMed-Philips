@@ -52,7 +52,6 @@ export const ComprasComponent = {
       },
     ]);
     const list = ListBaseComponent.render({
-      screen: "compra",
       columns: ["Mês", "Valor total"],
       items: [
         {
@@ -69,7 +68,7 @@ export const ComprasComponent = {
               supplier: "Fornecedor A",
               total: "$ 3100,00",
               component: {
-                title: "Nota Fiscal",
+                id: "nota-fiscal",
                 subtitle: "02/06/2025",
                 body: NotaFiscalComponent.render({
                   fornecedor: {

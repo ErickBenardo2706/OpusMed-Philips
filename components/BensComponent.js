@@ -7,7 +7,6 @@ import { ListBaseComponent } from './ListBaseComponent.js';
 export const BensComponent = {
   render: () => {
     const filter = FilterComponent.render([{
-      title: "Categoria",
       itens: [
         {
           id: "medicamento",
@@ -151,11 +150,7 @@ export const BensComponent = {
           id: "adicionar-produto",
           label: "Adicionar",
           funcao: OpenModal,
-          props:{
-            title: "Adicionar",
-            subtitle: "a",
-            component: CadastroComponent.render()
-          }
+          props: "modal-adicionar-produto"
     })
 
     return `

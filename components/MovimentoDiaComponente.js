@@ -8,7 +8,6 @@ import { MarcarChegadaComponent } from './MarcarChegadaComponent.js';
 export const MovimentoDiaComponente = {
   render: () => {
     const filter = FilterComponent.render([{
-      title: "Categoria",
       itens: [
         {
           id: "medicamento",

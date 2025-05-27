@@ -1,3 +1,4 @@
+import { updateScreen } from "../js/framework.js";
 import { routes } from "../routes/routes.js";
 import { ButtonComponent } from "./ButtonComponent.js";
 import { ButtonDeleteComponent } from "./ButtonDeleteComponente.js";
@@ -10,10 +11,7 @@ function onAddProduct() {
    { id: detalhes.length, produto: "", quantidade: 0 },
  ];
  detalhes = novoDetalhe;
- const route = routes.find(r => r.path === '/nova-compra');
- if (route && route.component) {
-     document.getElementById("app").innerHTML = route.component.render();
- }
+ updateScreen();
 }
 
 function onRemoveProduct(id) {
@@ -31,10 +29,7 @@ function onRemoveProduct(id) {
  }
 
  detalhes = detalheAtualizado;
- const route = routes.find(r => r.path === '/nova-compra');
- if (route && route.component) {
-     document.getElementById("app").innerHTML = route.component.render();
- }
+ updateScreen()
 }
 
 function handleChangeProduto(event, id){

@@ -41,22 +41,21 @@ export const EstoqueComponent = {
       ]
     },
     ],
-    [
-      {
-        value: "quant-maior",
-        nome: "Maior Quantidade",
-      },
-      {
-        value: "nome-menor",
-        nome: "Menor Quantidade",
-      },
-      {
-        value: "a-z",
-        nome: "Nome (A-Z)",
-      },
-    ]);
+      [
+        {
+          value: "quant-maior",
+          nome: "Maior Quantidade",
+        },
+        {
+          value: "nome-menor",
+          nome: "Menor Quantidade",
+        },
+        {
+          value: "a-z",
+          nome: "Nome (A-Z)",
+        },
+      ]);
     const list = ListBaseComponent.render({
-      screen: "estoque",
       columns: ["Nome", "Tipo"],
       items: [
         {
@@ -145,11 +144,7 @@ export const EstoqueComponent = {
       id: "adicionar-produto",
       label: "Adicionar",
       funcao: OpenModal,
-      props:{
-        title: "Adicionar Produto",
-        subtitle: "",
-        component: CadastroComponent.render()
-      }
+      props: "modal-adicionar-produto"
     })
 
 
