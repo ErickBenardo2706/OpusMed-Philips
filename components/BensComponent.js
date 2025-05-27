@@ -1,5 +1,7 @@
-import { OpenModal } from '../js/modal.js';
+import { OnDelete } from '../JS/button.js';
+import { OpenModal } from '../JS/modal.js';
 import { ButtonComponent } from './ButtonComponent.js';
+import { ButtonDeleteComponent } from './ButtonDeleteComponente.js';
 import { CadastroComponent } from './CadastroComponent.js';
 import { FilterComponent } from './FilterComponent.js';
 import { ListBaseComponent } from './ListBaseComponent.js';
@@ -43,12 +45,16 @@ export const BensComponent = {
     ],
     [
       {
-        value: "nome-desc",
-        nome: "Nome (Decrescente)",
+        value: "sem",
+        nome: "  ",
       },
       {
-        value: "nome-cres",
-        nome: "Nome (crescente)",
+        value: "data-fabri-cres",
+        nome: "Data de fabricação",
+      },
+      {
+        value: "data-manu-cres",
+        nome: "Data de manutenção",
       },
     ]);
     const list = ListBaseComponent.render({
@@ -60,28 +66,45 @@ export const BensComponent = {
           columns: ["Maca", "35"],
           items: [
             {
-              manutencao: "Última manutenção",
+              fabricacao: "Data de Fabricação",
               lote: "Nº Lote",
               setor: "Setor",
               marca: "Marca",
+              manutencao:"Última manutenção",
+              deletar: "Excluir",
             },
             {
-              manutencao: "05/10/2024",
+              fabricacao: "10/2022",
               lote: "5E3W540",
               setor: "Farmácia",
               marca: "Philips",
+              manutencao: "05/10/2024",
+              deletar: ButtonDeleteComponent.render({
+                id: "5E3W540",
+                funcao: OnDelete,
+              }),
             },
             {
-              manutencao: "05/10/2024",
-              lote: "5E3W540",
+              fabricacao: "10/2022",
+              lote: "5E3W541",
               setor: "Farmácia",
               marca: "Philips",
+              manutencao: "05/10/2024",
+              deletar: ButtonDeleteComponent.render({
+                id: "5E3W541",
+                funcao: OnDelete,
+              }),
             },
             {
-              manutencao: "05/10/2024",
-              lote: "5E3W540",
+              fabricacao: "10/2022",
+              lote: "5E3W542",
               setor: "Farmácia",
               marca: "Philips",
+              manutencao: "05/10/2024",
+              deletar: ButtonDeleteComponent.render({
+                id: "5E3W542",
+                funcao: OnDelete,
+              }),
             },
           ]
         },
@@ -90,28 +113,45 @@ export const BensComponent = {
           columns: ["Raio X", "10"],
           items: [
             {
-              manutencao: "Última manutenção",
+              fabricacao: "Data de Fabricação",
               lote: "Nº Lote",
               setor: "Setor",
               marca: "Marca",
+              manutencao: "Última manutenção",
+              deletar: "Excluir",
             },
             {
-              manutencao: "05/10/2024",
-              lote: "5E3W540",
+              fabricacao: "09/2020",
+              lote: "5E3W543",
               setor: "Farmácia",
               marca: "Philips",
+              manutencao: "05/10/2024",
+              deletar: ButtonDeleteComponent.render({
+                id: "5E3W543",
+                funcao: OnDelete,
+              }),
             },
             {
-              manutencao: "05/10/2024",
-              lote: "5E3W540",
+              fabricacao: "09/2020",
+              lote: "5E3W544",
               setor: "Farmácia",
               marca: "Philips",
+              manutencao: "05/10/2024",
+              deletar: ButtonDeleteComponent.render({
+                id: "5E3W544",
+                funcao: OnDelete,
+              }),
             },
             {
-              manutencao: "05/10/2024",
-              lote: "5E3W540",
+              fabricacao: "09/2020",
+              lote: "5E3W545",
               setor: "Farmácia",
               marca: "Philips",
+              manutencao: "05/10/2024",
+              deletar: ButtonDeleteComponent.render({
+                id: "5E3W545",
+                funcao: OnDelete,
+              }),
             },
           ]
         },
@@ -120,28 +160,45 @@ export const BensComponent = {
           columns: ["Cadeira de Rodas", "40"],
           items: [
             {
-              manutencao: "Última manutenção",
+              fabricacao: "Data de Fabricação",
               lote: "Nº Lote",
               setor: "Setor",
               marca: "Marca",
+              manutencao: "Última manutenção",
+              deletar: "Excluir",
             },
             {
-              manutencao: "05/10/2024",
-              lote: "5E3W540",
+              fabricacao: "08/2021",
+              lote: "5E3W546",
               setor: "Farmácia",
               marca: "Philips",
+              manutencao: "05/10/2024",
+              deletar: ButtonDeleteComponent.render({
+                id: "5E3W546",
+                funcao: OnDelete,
+              }),
             },
             {
-              manutencao: "05/10/2024",
-              lote: "5E3W540",
+              fabricacao: "08/2021",
+              lote: "5E3W547",
               setor: "Farmácia",
               marca: "Philips",
+              manutencao: "05/10/2024",
+              deletar: ButtonDeleteComponent.render({
+                id: "5E3W547",
+                funcao: OnDelete,
+              }),
             },
             {
-              manutencao: "05/10/2024",
-              lote: "5E3W540",
+              fabricacao: "08/2021",
+              lote: "5E3W548",
               setor: "Farmácia",
               marca: "Philips",
+              manutencao: "05/10/2024",
+              deletar: ButtonDeleteComponent.render({
+                id: "5E3W548",
+                funcao: OnDelete,
+              }),
             },
           ]
         },

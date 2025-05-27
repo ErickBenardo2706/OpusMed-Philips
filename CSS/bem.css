@@ -1,0 +1,13 @@
+.btn-delet {
+    all:unset;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.btn-delet img{
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+}
