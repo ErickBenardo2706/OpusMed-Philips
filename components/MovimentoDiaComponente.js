@@ -1,9 +1,7 @@
-import { OpenModal } from '../JS/modal.js';
+import { OpenModal, OpenModalProps } from '../JS/modal.js';
 import { ButtonComponent } from './ButtonComponent.js';
-import { CadastroComponent } from './CadastroComponent.js';
 import { FilterComponent } from './FilterComponent.js';
 import { ListBaseComponent } from './ListBaseComponent.js';
-import { MarcarChegadaComponent } from './MarcarChegadaComponent.js';
 
 export const MovimentoDiaComponente = {
   render: () => {
@@ -41,23 +39,23 @@ export const MovimentoDiaComponente = {
       ]
     },
     ],
-    [
-      {
-        value: "medicamento-cresc",
-        nome: "Nome Medicamento",
-      },
-      {
-        value: "nome-cres",
-        nome: "Nome (crescente)",
-      },
-    ]);
+      [
+        {
+          value: "medicamento-cresc",
+          nome: "Nome Medicamento",
+        },
+        {
+          value: "nome-cres",
+          nome: "Nome (crescente)",
+        },
+      ]);
     const list = ListBaseComponent.render({
       screen: "movimento",
       columns: ['Produto', 'Horário de Saída', 'Horário de Chegada', 'Status', ' '],
       items: [
         {
           id: 1,
-          columns: ['Dipirona', '10:15', 'x', 'Em andamento','<div class="status"></div>' ],
+          columns: ['Dipirona', '10:15', 'x', 'Em andamento', '<div class="status"></div>'],
           items: [
             {
               saida: "Quantidade de Saída",
@@ -68,11 +66,9 @@ export const MovimentoDiaComponente = {
               saida: "10",
               chegada: "x",
               colaborador: "Jean Chera",
+              funcao: OpenModalProps,
               component: {
-                title: "Marcar chegada",
-                subtitle: "Dipirona (Jean Chera)",
-                body: MarcarChegadaComponent.render()
-
+                id: "modal-marcar-chegada",
               }
             }
           ]
@@ -91,10 +87,8 @@ export const MovimentoDiaComponente = {
               chegada: "2",
               colaborador: "Luana Garcia",
               component: {
-                title: "Marcar chegada",
-                subtitle: "Bezetacil (Luana Garcia)",
-                body: MarcarChegadaComponent.render()
-
+                funcao: OpenModalProps,
+                id: "modal-marcar-chegada",
               }
             }
           ]
@@ -106,11 +100,7 @@ export const MovimentoDiaComponente = {
       id: "adicionar-produto",
       label: "Criar movimento",
       funcao: OpenModal,
-      props: {
-        title: "Criar movimento",
-        subtitle: "a",
-        component: CadastroComponent.render()
-      }
+      props: "modal-adicionar-produto"
     })
 
 

@@ -1,7 +1,3 @@
-import { ToggleBackground } from "../js/menu.js";
-import { OpenModal, SetModal } from "../js/modal.js";
-import { routes } from "../routes/routes.js";
-
 export const ListItemComponent = {
     render: (props = {}) => {
         return `
@@ -22,14 +18,10 @@ export const ListItemComponent = {
                             if (index !== 0 && content.component) {
                                 setTimeout(() => {
                                     const el = document.getElementById(rowId);
-                                    if (el) el.addEventListener("click", () => {
-                                        SetModal({
-                                            id: `${content.component.id}-body`, 
-                                            subtitle: content.component.subtitle,
-                                            component: content.component.body
-                                        });
-                                        OpenModal(`modal-${content.component.id}`);
-                                    });
+                                    if (el){
+                                        if(el.onclick) el.onclick = content.component.funcao(content.component)
+                                        else el.addEventListener("click", () => {content.component.funcao(content.component)});
+                                    } 
                                 }, 0);
                             }
 
