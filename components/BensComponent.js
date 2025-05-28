@@ -1,5 +1,6 @@
 import { OnDelete } from '../JS/button.js';
-import { OpenModal } from '../js/modal.js';
+import { url } from '../JS/lib.js';
+import { OpenModal } from '../JS/modal.js';
 import { ButtonComponent } from './ButtonComponent.js';
 import { ButtonDeleteComponent } from './ButtonDeleteComponente.js';
 import { FilterComponent } from './FilterComponent.js';
@@ -7,6 +8,14 @@ import { ListBaseComponent } from './ListBaseComponent.js';
 
 export const BensComponent = {
   render: () => {
+
+    async function GetBens(){
+      const response = await fetch(`${url}/patrimonios`);
+      const data = await response.data;
+      console.log(data)
+    }
+    GetBens();
+
     const filter = FilterComponent.render([{
       itens: [
         {

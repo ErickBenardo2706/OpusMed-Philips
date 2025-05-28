@@ -1,6 +1,3 @@
-import { OpenModal, SetModal } from "../JS/modal.js";
-import { NotaFiscalComponent } from "./NotaFiscalComponent.js";
-
 export const ListItemComponent = {
     render: (props = {}) => {
         return `
@@ -21,17 +18,10 @@ export const ListItemComponent = {
                             if (index !== 0 && content.component) {
                                 setTimeout(() => {
                                     const el = document.getElementById(rowId);
-                                    if (el) el.addEventListener("click", () => {
-                                        if(content.component.body){
-                                            SetModal({
-                                                id: content.component.id,
-                                                title: content.component.title,
-                                                subtitle: content.component.subtitle, 
-                                                component: content.component.body,
-                                            });
-                                        }
-                                        OpenModal(`modal-${content.component.id}`);
-                                    });
+                                    if (el){
+                                        if(el.onclick) el.onclick = content.component.funcao(content.component)
+                                        else el.addEventListener("click", () => {content.component.funcao(content.component)});
+                                    } 
                                 }, 0);
                             }
 

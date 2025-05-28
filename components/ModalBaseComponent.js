@@ -1,5 +1,5 @@
 import { ToggleBackground } from "../JS/menu.js";
-import { CloseModal } from "../js/modal.js";
+import { CloseModal } from "../JS/modal.js";
 
 export const ModalBaseComponent = {
     render: (props = {}) => {

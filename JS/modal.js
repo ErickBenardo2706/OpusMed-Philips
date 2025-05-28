@@ -10,6 +10,10 @@ export function SetModal(props) {
     })
 }
 
+export function OpenModalProps(props) {
+    document.getElementById(props.id).classList.remove('close');
+    ToggleBackground();
+}
 export function OpenModal(id) {
     document.getElementById(id).classList.remove('close');
     ToggleBackground();

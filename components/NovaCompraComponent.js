@@ -58,46 +58,46 @@ export const NovaCompraComponent = {
 
           <div class="table-component">
             <table>
-                    ${props.map((content) => {
-                    return `
-                    <tr id="object-${content.id}">
-                        ${Object.keys(content).map((key) => {
-                           setTimeout(() => {
-                               const row = document.getElementById(`object-${content.id}`)
-                               const el = row.querySelector('input[type="text"]');
-                               const nm = row.querySelector('input[type="number"]');
+              ${props.map((content) => {
+                return `
+                <tr id="object-${content.id}">
+                  ${Object.keys(content).map((key) => {
+                     setTimeout(() => {
+                         const row = document.getElementById(`object-${content.id}`)
+                         const el = row.querySelector('input[type="text"]');
+                         const nm = row.querySelector('input[type="number"]');
 
-                               if (el && nm) {
-                                   el.onchange = (e)=>{handleChangeProduto(e, content.id)}
-                                   nm.onchange = (e)=>{handleChangeQuantidade(e, content.id)}
-                                   }
-                                   }, 0);
-                               
-                               if (key == "produto")
-                            return `<td>
-                                         <input type="text" class="inputProduto inputComponent" placeholder="Produto" value="${content.produto}">
-                                    </td>
-                                       `;
-                                       else if (key == "quantidade")
-                                         return `<td>
-                                            <input type="number" class="inputQuantidade inputComponent" value="${content.quantidade}">
-                                            </td>
-                                            `;
-                                 })
-                                 .join("")}
-                                    <td>
-                                        ${ButtonDeleteComponent.render({
-                                          id: `delete-button-${content.id}`,
-                                          label: "remover",
-                                          funcao: onRemoveProduct,
-                                          props: content.id,
-                                        })}
-                                    </td>
-                    </tr>
-                       `;
-                     })
-                     .join("")}
-                        </table>
+                         if (el && nm) {
+                             el.onchange = (e)=>{handleChangeProduto(e, content.id)}
+                             nm.onchange = (e)=>{handleChangeQuantidade(e, content.id)}
+                             }
+                             }, 0);
+                         
+                      if (key == "produto")
+                        return `
+                          <td>
+                            <input type="text" class="inputProduto inputComponent" placeholder="Produto" value="${content.produto}">
+                          </td>
+                        `
+                      else if (key == "quantidade")
+                        return `
+                          <td>
+                            <input type="number" class="inputQuantidade inputComponent" value="${content.quantidade}">
+                          </td>
+                        `
+                    }).join("")}
+                    <td>
+                        ${ButtonDeleteComponent.render({
+                          id: `delete-button-${content.id}`,
+                          label: "remover",
+                          funcao: onRemoveProduct,
+                          props: content.id,
+                        })}
+                    </td>
+                </tr>
+                 `
+              }).join("")}
+            </table>
          </div>
 
            <div class="containerCompra">

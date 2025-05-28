@@ -5,17 +5,20 @@ export const MarcarChegadaComponent = {
         let quantidadeChegada
         let horaChegada
 
+        function marcarChegada(){
+            console.log("a");
+        }
+
         setTimeout(() => {
+            const marcarChegadaButton = document.getElementById("marcar-chegada-button");
+            if (marcarChegadaButton) marcarChegadaButton.addEventListener('click', marcarChegada);
+
             const quantidadeChegadaInput = document.getElementById("quantidadeChegada");
             if (quantidadeChegadaInput) quantidadeChegadaInput.onchange = (e) => quantidadeChegada = e.target.value;
 
             const horaChegadaInput = document.getElementById("horaChegada");
             if (horaChegadaInput) horaChegadaInput.onchange = (e) => horaChegada = e.target.value;
         }, 0);
-
-        function marcarChegada(){
-            console.log("a");
-        }
 
         return `
             <div class="screen">
@@ -26,11 +29,9 @@ export const MarcarChegadaComponent = {
             </div>
             
         <div class="modal-button">
-            ${ButtonComponent.render({
-                id: "confirmarAdicionarProduto",
-                label: "Adicionar",
-                funcao: marcarChegada
-            })}
+            <button id="marcar-chegada-button" class="botao">
+                Confirmar
+            </button>
         </div>
         `
     }

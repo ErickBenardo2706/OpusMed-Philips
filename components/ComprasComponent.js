@@ -1,4 +1,4 @@
-import { ChangePage } from "../JS/button.js";
+import { ChangePage, handleClick } from "../JS/button.js";
 import { ButtonComponent } from "./ButtonComponent.js";
 import { FilterComponent } from "./FilterComponent.js";
 import { ListBaseComponent } from "./ListBaseComponent.js";
@@ -68,6 +68,7 @@ export const ComprasComponent = {
               supplier: "Fornecedor A",
               total: "$ 3100,00",
               component: {
+                funcao: handleClick,
                 id: "nota-fiscal",
                 title: "Nota Fiscal",
                 subtitle: "02/06/2025",
