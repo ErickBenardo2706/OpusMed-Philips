@@ -3,12 +3,8 @@ export const ButtonComponent = {
     setTimeout(() => {
       const el = document.getElementById(props.id);
       if (el) {
-        if (el.onclick){
-          el.onclick = ()=>{props.funcao(props.props)};
-        }
-        else{
-          el.addEventListener("click", ()=>{props.funcao(props.props)})
-        }
+        const handler = ()=>props.funcao(props.props)
+        el.onclick = handler
       };
     }, 0);
     return `

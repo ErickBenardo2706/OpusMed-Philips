@@ -19,8 +19,8 @@ export const ListItemComponent = {
                                 setTimeout(() => {
                                     const el = document.getElementById(rowId);
                                     if (el){
-                                        if(el.onclick) el.onclick = content.component.funcao(content.component)
-                                        else el.addEventListener("click", () => {content.component.funcao(content.component)});
+                                        const handle = ()=> content.component.funcao(content.component);
+                                        if(el.onclick) el.onclick = handle
                                     } 
                                 }, 0);
                             }

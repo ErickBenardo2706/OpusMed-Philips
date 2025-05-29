@@ -9,7 +9,9 @@ export const ExcluirItem = {
             <textarea rows="6"></textarea>
         </div>
         <div class="modal-button"> 
-            ${ButtonComponent.render({ id: "confirmar-exclusao", label: "Confirmar Exclusão", funcao: ConfirmDelete })}
+            <button id="confirmarExclusao" class="botao">
+                Confirmar
+            </button>
         </div>
         `
     }

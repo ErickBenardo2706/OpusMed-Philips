@@ -1,4 +1,4 @@
-import { updateScreen } from "../js/framework.js";
+import { updateScreen } from "../JS/framework.js";
 import { routes } from "../routes/routes.js";
 import { ButtonComponent } from "./ButtonComponent.js";
 import { ButtonDeleteComponent } from "./ButtonDeleteComponente.js";
