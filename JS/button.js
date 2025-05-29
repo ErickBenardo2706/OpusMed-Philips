@@ -1,7 +1,7 @@
 import { ToggleBackground } from "./menu.js";
 import { updateScreen } from '../JS/framework.js'
 import { url } from '../JS/lib.js';
-import { CloseModal, OpenModal, SetModal } from "../js/modal.js";
+import { CloseModal, OpenModal, SetModal } from "../JS/modal.js";
 
 export function ChangePage(route) {
     window.location.href = route;

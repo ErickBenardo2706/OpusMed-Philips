@@ -1,6 +1,6 @@
 import { OnDelete } from '../JS/button.js';
 import { url } from '../JS/lib.js';
-import { OpenModal } from '../js/modal.js';
+import { OpenModal } from '../JS/modal.js';
 import { ButtonComponent } from './ButtonComponent.js';
 import { ButtonDeleteComponent } from './ButtonDeleteComponente.js';
 import { FilterComponent } from './FilterComponent.js';
@@ -33,7 +33,6 @@ export const BensComponent = {
 
     function adicionarNaListaSuspensa(novoPatrimonio, index) {
       let patrimonio = lista.find(p => p.columns[0] == novoPatrimonio.NOME_PATRIMONIO);
-      console.log(patrimonio)
       if (patrimonio){
           lista[patrimonio.id].items.push(
           {
