@@ -1,4 +1,4 @@
-.status {
+.andamento {
     width: 15px;
     height: 15px;
     background-color: red;
@@ -6,11 +6,26 @@
     cursor: pointer;
 }
 
-.statusFim {
+.finalizado {
     width: 15px;
     height: 15px;
     background-color: green;
     border-radius: 50%;
     cursor: pointer;
+}
+
+.selectDate{
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: fit-content;
+    font-weight: bold;
+}
+
+.selectDate input{
+    font-size: 1rem;
+    
+    font-family: var(--corpo);
 }
 

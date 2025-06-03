@@ -1,6 +1,8 @@
-import { ToggleBackground } from "../JS/menu.js";
-import { CloseModal } from "../JS/modal.js";
+import { ToggleBackground } from "../js/menu.js";
+import { CloseModal } from "../js/modal.js";
+import { AtualizarManutencaoComponent } from "./AtualizarManutencaoComponent.js";
 import { CadastroComponent } from "./CadastroComponent.js";
+import { CadastroMovimento } from "./CadastroMovimento.js";
 import { ExcluirItem } from "./ExcluirItem.js";
 import { HeaderComponent } from "./HeaderComponent.js";
 import { MarcarChegadaComponent } from "./MarcarChegadaComponent.js";
@@ -12,10 +14,11 @@ export const LayoutComponent = {
   render: (content, title) => {
     setTimeout(() => {
       const el = document.getElementById("background");
-      if (el) el.addEventListener("click", ()=>{
+      const handle = ()=>{
         CloseModal();
         ToggleBackground();
-      });
+      }
+      if (el) el.onclick = handle;
     }, 0);
     return `
       <div>
@@ -49,6 +52,19 @@ export const LayoutComponent = {
                 id: "marcar-chegada",
                 title: "Marcar chegada",
                 component: MarcarChegadaComponent.render()
+              })}
+            </div>
+            <div id="modal-atualizar-manutencao" class="modal close">
+              ${ModalBaseComponent.render({
+                id: "atualizar-manutencao",
+              })}
+            </div>
+            <div id="modal-criar-movimento" class="modal close">
+              ${ModalBaseComponent.render({
+                id: "criar-movimento",
+                title: "Criar movimento",
+                subtitle: dayjs().format('DD/MM/YYYY'),
+                component: CadastroMovimento.render()
               })}
             </div>
         </div>

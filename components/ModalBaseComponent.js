@@ -5,10 +5,13 @@ export const ModalBaseComponent = {
     render: (props = {}) => {
         setTimeout(() => {
             const el = document.getElementById(`close-modal-${props.id}`);
-            if (el) el.addEventListener("click", () => {
-                CloseModal();
-                ToggleBackground();
-            });
+            if (el) {
+                const handler = () => {
+                    CloseModal();
+                    ToggleBackground();
+                }
+                el.onclick = handler
+            }
         }, 0);
         return `
             <header>

@@ -15,7 +15,7 @@
     align-items: flex-start;
 }
  
-.screen .linha-baixo {
+.linha-baixo {
     display: grid;
     width: 100%;
     gap: 1rem;
@@ -26,6 +26,7 @@
 .screen .date_input {
     background-color: var(--cinza-claro);
     padding: 1rem;
+    font-family: var(--corpo);
     border-radius: 5px;
     color: var(--ciano);
     border: 1.5px solid var(--cinza);

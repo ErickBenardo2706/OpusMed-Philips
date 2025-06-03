@@ -22,7 +22,7 @@ export const EstoquePage = {
 };
 export const BensPage = {
   render: () => {
-    return LayoutComponent.render(BensComponent.render(), "Bens");
+    return LayoutComponent.render(BensComponent.render(), "Patrimônios");
   }
 };
 export const ComprasPage = {

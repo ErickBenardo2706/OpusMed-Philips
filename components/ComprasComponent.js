@@ -1,4 +1,5 @@
-import { ChangePage, handleClick } from "../JS/button.js";
+import { ChangePage, handleClick } from "../js/button.js";
+import { ExibirNota } from "../JS/modal.js";
 import { ButtonComponent } from "./ButtonComponent.js";
 import { FilterComponent } from "./FilterComponent.js";
 import { ListBaseComponent } from "./ListBaseComponent.js";
@@ -41,16 +42,16 @@ export const ComprasComponent = {
       ]
     },
     ],
-    [
-      {
-        value: "nome-desc",
-        nome: "Nome (Decrescente)",
-      },
-      {
-        value: "nome-cres",
-        nome: "Nome (crescente)",
-      },
-    ]);
+      [
+        {
+          value: "nome-desc",
+          nome: "Nome (Decrescente)",
+        },
+        {
+          value: "nome-cres",
+          nome: "Nome (crescente)",
+        },
+      ]);
     const list = ListBaseComponent.render({
       columns: ["Mês", "Valor total"],
       items: [
@@ -68,45 +69,47 @@ export const ComprasComponent = {
               supplier: "Fornecedor A",
               total: "$ 3100,00",
               component: {
-                funcao: handleClick,
-                id: "nota-fiscal",
-                title: "Nota Fiscal",
-                subtitle: "02/06/2025",
-                body: NotaFiscalComponent.render(
-                {
-                  fornecedor: {
-                    representante: "Jean Chera",
-                    nome: "Forncedor A",
-                    endereco: "Rua Dois de Setembro",
-                    cnpj: "48780455-0001-91",
-                    telefone: "(11) 4402-8922",
-                    email: "contato@fornecedor_a.com",
-                  },
-                  detalhe: [
+                funcao: ExibirNota,
+                props: {
+
+                  id: "nota-fiscal",
+                  subtitle: "02/06/2025",
+                  body: NotaFiscalComponent.render(
                     {
-                      quantidade: 10,
-                      nome: "Rivotril",
-                      valor: 55,
-                    },
-                    {
-                      quantidade: 20,
-                      nome: "Dipirona",
-                      valor: 30,
-                    },
-                    {
-                      quantidade: 30,
-                      nome: "Tramadol",
-                      valor: 35,
-                    },
-                    {
-                      quantidade: 10,
-                      nome: "Ritalina",
-                      valor: 90,
-                    }
-                  ]
-                })
-              }
-            },
+                      fornecedor: {
+                        representante: "Jean Chera",
+                        nome: "Forncedor A",
+                        endereco: "Rua Dois de Setembro",
+                        cnpj: "48780455-0001-91",
+                        telefone: "(11) 4402-8922",
+                        email: "contato@fornecedor_a.com",
+                      },
+                      detalhe: [
+                        {
+                          quantidade: 10,
+                          nome: "Rivotril",
+                          valor: 55,
+                        },
+                        {
+                          quantidade: 20,
+                          nome: "Dipirona",
+                          valor: 30,
+                        },
+                        {
+                          quantidade: 30,
+                          nome: "Tramadol",
+                          valor: 35,
+                        },
+                        {
+                          quantidade: 10,
+                          nome: "Ritalina",
+                          valor: 90,
+                        }
+                      ]
+                    })
+                }
+              },
+            }
           ],
         },
       ],

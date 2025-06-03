@@ -1,7 +1,7 @@
 import { ToggleBackground } from "./menu.js";
 import { updateScreen } from '../JS/framework.js'
 import { url } from '../JS/lib.js';
-import { CloseModal, OpenModal, SetModal } from "../JS/modal.js";
+import { CloseModal, OpenModal, SetModal } from "../js/modal.js";
 
 export function ChangePage(route) {
     window.location.href = route;
@@ -13,7 +13,7 @@ export function OnDelete(cdBarras) {
     setTimeout(() => {
       const el = document.getElementById("confirmarExclusao");
       if (el) {
-        const handler = ()=>ConfirmDelete(cdBarras)
+        const handler = (e)=>ConfirmDelete(cdBarras)
         el.onclick = handler
       };
     }, 0);

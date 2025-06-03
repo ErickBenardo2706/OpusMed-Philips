@@ -17,19 +17,21 @@ export const ListItemComponent = {
 
                             if (index !== 0 && content.component) {
                                 setTimeout(() => {
-                                    const el = document.getElementById(rowId);
+                                    const el = document.getElementsByClassName(rowId);
                                     if (el){
-                                        const handle = ()=> content.component.funcao(content.component);
-                                        if(el.onclick) el.onclick = handle
+                                        const handle = ()=> content.component.funcao(content.component.props);
+                                        [...el].forEach((td => td.onclick = handle))
                                     } 
                                 }, 0);
                             }
 
                             return `
-                                    <tr id="${rowId}" class="${content["component"] ? "clicavel" : ""}">
+                                    <tr class="${content["component"] ? "clicavel" : ""}">
                                         ${Object.keys(content).map((key) => {
                                             if (key !== "component") {
-                                                return `<td>${content[key]}</td>`;
+                                                if(key !== "deletar")
+                                                    return `<td class="${rowId}">${content[key]}</td>`;
+                                                return `<td >${content[key]}</td>`;
                                             }
                                             return "";
                                         }).join("")}

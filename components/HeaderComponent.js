@@ -21,7 +21,7 @@ export const HeaderComponent = {
                      <div class="name_user close">
                         <img src="./assets/user.png"> <br>
                         <label>Seja Bem-Vindo</label>
-                    <label id="name" >Erick</label>
+                    <label id="name" >Hisabela</label>
                 
                 </div>
                

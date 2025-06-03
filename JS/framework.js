@@ -18,16 +18,3 @@ function navigateTo(path) {
 export function updateScreen(){
   navigateTo(location.hash.slice(1) || "/");
 }
-
-// export function dataBind(element, attribute, data, key) {
-//   Object.defineProperty(data, key, {
-//     set: function(value) {
-//       this[`_${key}`] = value;
-//       element[attribute] = value;
-//     },
-//     get: function() {
-//       return this[`_${key}`];
-//     }
-//   });
-//   element[attribute] = data[key];
-// }

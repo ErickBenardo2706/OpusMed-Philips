@@ -2,6 +2,8 @@ import { ButtonComponent } from './ButtonComponent.js';
 import { url } from '../JS/lib.js';
 import { InputComponent } from './InputComponent.js';
 import { ModalBaseComponent } from "./ModalBaseComponent.js";
+import { updateScreen } from '../JS/framework.js';
+import { formatData } from '../JS/helper.js';
 
 
 let produto = {}
@@ -10,11 +12,10 @@ let codigoBarras
 let nomeProduto
 let tipoProduto
 let mg
-let tarja
+let tarja = "S"
 let quantidade
-let valor
+let valor = 0
 let dataValidade
-let ultimaManutencao
 let dataFabricacao
 let setor
 let marca
@@ -24,69 +25,65 @@ export const CadastroComponent = {
 
         function getDatabase(cdBarras){
             fetch(`${url}/patrimonios/${cdBarras}`)
-            .then(response => {
-                console.log(response)
-                response.json()
-            })
+            .then(response => response.json())
             .then(data => {
-                console.log(data)
-                if (data){
-                    outDataBase(data);
-                }
+                outDataBase(data)
             })
         }
 
         function outDataBase(data){
             produto = data[0]
-            console.log(produto);
-            codigoBarras = produto.CODIGO_BARRAS
-            nomeProduto = produto.NOME_PATRIMONIO
-            setor = produto.SETOR
-            marca = produto.MARCA
-            dataFabricacao = produto.DATA_FABRICACAO
-            ultimaManutencao = produto.ULTIMA_MANUTENCAO
-            tipoProduto = 3
-            document.getElementById("modal-adicionar-produto").innerHTML = ModalBaseComponent.render({
-                id: "adicionar-produto",
-                title: "Adicionar produto",
-                component: CadastroComponent.render()
-              })
+            if(produto){
+                const partes = produto.NOME.split('|');
+                codigoBarras = produto.CODIGO_BARRAS
+                nomeProduto = partes[0].trim()  
+
+                setor = produto.SETOR
+                marca = produto.MARCA
+                dataFabricacao = produto.DATA_FABRICACAO
+
+                tarja = produto.ULTIMA_MANUTENCAO
+                dataValidade = produto.DATA_VENCIMENTO
+                tipoProduto = produto.ID_CATEGORIA_PRODUTO
+                quantidade = produto.QUANTIDADE_MINIMA
+                if(tipoProduto != 3)mg = partes[1].trim()
+                valor = produto.VALOR
+
+                document.getElementById("modal-adicionar-produto").innerHTML = ModalBaseComponent.render({
+                    id: "adicionar-produto",
+                    title: "Adicionar produto",
+                    component: CadastroComponent.render()
+                })
+            }
         }
         
         function addProduct() {
-            fetch(`${url}/patrimonios`, {
+            if (tipoProduto != 3)
+                nomeProduto = `${nomeProduto.trim()} | ${mg.trim()}`
+            fetch(`${url}/item`, {
                 method: "POST",
-                body: {
-                    "id": codigoBarras,
-                    "nomePatrimonio": nomeProduto,
-                   "codigoBarras": codigoBarras,
-                    "setor": setor,
-                    "marca": marca,
-                    "dataFabricacao": dataFabricacao,
-                    "ultimaManutencao": ultimaManutencao
-                }
+                headers: {
+                  "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    nomePatrimonio: nomeProduto,
+                    codigoBarras,
+                    setor,
+                    marca,
+                    dataFabricacao: dayjs(dataFabricacao).format('YYYY-MM-DD'),
+                    idCategoria: tipoProduto,
+                    quantidade: 0,
+                    dataVencimento: dayjs(dataValidade).format('YYYY-MM-DD'),
+                    valor,
+                    tarja
+                })
 
             })
             .then(response => response.json())
             .then(data => {
                 console.log(data);
-            })
-            console.log("a")
-            const produto = {
-                codigoDeBarras: codigoBarras,
-                nomeProduto,
-                tipoProduto,
-                mg,
-                tarja,
-                quantidade,
-                valor,
-                dataValidade,
-                dataManutencao: ultimaManutencao,
-                dataFabricacao,
-                setor,
-                marca,
-            }
-            console.log(produto)
+                updateScreen()
+            }) 
         }
 
             setTimeout(() => {
@@ -145,7 +142,7 @@ export const CadastroComponent = {
                 const dataValidadeInput = document.getElementById("dataValidade");
                 dataValidadeInput.classList.add("display-none")
                 if (dataValidadeInput) {
-                    dataValidadeInput.value = dataValidade ?? ""
+                    dataValidadeInput.value = formatData(dataValidade) ?? ""
                     dataValidadeInput.onchange = (e) => dataValidade = e.target.value;
                 }
 
@@ -155,13 +152,6 @@ export const CadastroComponent = {
                     dataFabricacaoInput.value = dataFabricacao ?? ""
                     dataFabricacaoInput.onchange = (e) => dataFabricacao = e.target.value;
                 }
-
-                const dataManutencaoInput = document.getElementById("dataManutencao");
-                dataManutencaoInput.classList.add("display-none")
-                if (dataManutencaoInput) {
-                    dataManutencaoInput.valor = ultimaManutencao
-                    dataManutencaoInput.onchange = (e) => ultimaManutencao = e.target.value
-                };
 
                 const setorInput = document.getElementById("setor");
                 setorInput.classList.add("display-none")
@@ -185,7 +175,6 @@ export const CadastroComponent = {
                         mgInput.classList.remove("display-none")
                         tarjaInput.classList.remove("display-none")
                         dataFabricacaoInput.classList.add("display-none")
-                        dataManutencaoInput.classList.add("display-none")
                         setorInput.classList.add("display-none")
                         marcaInput.classList.add("display-none")
                     }
@@ -196,7 +185,6 @@ export const CadastroComponent = {
                         mgInput.classList.add("display-none")
                         tarjaInput.classList.add("display-none")
                         dataFabricacaoInput.classList.add("display-none")
-                        dataManutencaoInput.classList.add("display-none")
                         setorInput.classList.add("display-none")
                         marcaInput.classList.add("display-none")
                     }
@@ -207,7 +195,6 @@ export const CadastroComponent = {
                         nomeProdutoInput.classList.remove("display-none")
                         tarjaInput.classList.add("display-none")
                         dataFabricacaoInput.classList.remove("display-none")
-                        dataManutencaoInput.classList.remove("display-none")
                         setorInput.classList.remove("display-none")
                         marcaInput.classList.remove("display-none")
                     }
@@ -223,26 +210,29 @@ export const CadastroComponent = {
                     ${InputComponent.render({ id: "nomeProduto", type: "text", placeholder: "Nome:" })}
                 </div>
                 <div class="linha-baixo">
-                    ${InputComponent.render({ id: "codigoDeBarras", type: "text", placeholder: "Código de barra:" })}
-                    <div class="inputComponent">
-                        <select value="${tipoProduto}" id="tipoProduto" required>
+                    ${InputComponent.render({ id: "codigoDeBarras", type: "number", placeholder: "Código de barra:" })}
+                        <select class="inputComponent" value="${tipoProduto}" id="tipoProduto" required>
                             <option value="" disabled hidden>Tipo de produto:</option>
                             <option value="1">Medicamento</option>
                             <option value="2">EPI</option>
                             <option value="3">Patrimônio</option>
                         </select>
-                    </div>
                     ${InputComponent.render({ id: "quantidade", type: "text", placeholder: "Quantidade:" })}
                 </div>
                 <div class="linha-baixo">
-                    ${InputComponent.render({ id: "mg", type: "text", placeholder: "Mg:" })}
-                    ${InputComponent.render({ id: "tarja", type: "text", placeholder: "Tarja:" })}   
-                    ${InputComponent.render({ id: "valor", type: "text", placeholder: "Valor unitário:" })} 
+                    ${InputComponent.render({ id: "mg", type: "text", placeholder: "Dose:" })}
+                        <select class="inputComponent" value="${tarja}" id="tarja" required>
+                            <option value="" disabled hidden>Tarja:</option>
+                            <option value="S">Sem tarja</option>
+                            <option value="P">Preta</option>
+                            <option value="V">Vermelha</option>
+                            <option value="A">Amarela</option>
+                        </select>
+                    ${InputComponent.render({ id: "valor", type: "number", placeholder: "Valor unitário:" })} 
                     ${InputComponent.render({ id: "setor", type: "text", placeholder: "Setor:" })} 
                     ${InputComponent.render({ id: "marca", type: "text", placeholder: "Marca:" })} 
                     <input id="dataValidade" type="text" placeholder="Data Validade:" onfocus="(this.type='date')" onblur="(this.type='text')" name="data" class="date_input">
                     <input id="dataFabricacao" type="text" placeholder="Data Fabricação:" onfocus="(this.type='date')" onblur="(this.type='text')" name="data" class="date_input">
-                    <input id="dataManutencao" type="text" placeholder="Última Manutenção:" onfocus="(this.type='date')" onblur="(this.type='text')" name="data" class="date_input">
                 </div>
             </div>
         </div>
